@@ -1,19 +1,37 @@
 ---
 layout: post
-title: "A Continuous Notion of Continuity"
+title: "Continuous Notions of Continuity"
 date: 2024-04-18
 mathjax: true
 ---
 
-Here is the rewritten version with $latex... $ replaced by $$ ... $$:
+In analysis, we are often concerned with continuous functions. But this is a binary distinction: a function is either continuous or it's discontinuous. Is there a way to quantify how continuous a function is?
 
-In analysis, we are often concerned with continuous functions. But this is usually a binary distinction: a function is either continuous or it's discontinuous. Is there a way to quantify how continuous a function is?
+(Whoops, I looked it up and it seems that what I have is already quite well-known under: https://en.wikipedia.org/wiki/Modulus_of_continuity)
 
+Let's maybe change this post to "This is me being super insightful and coming up with new stuff" to "Here are some extensions that other mathematicians have found".
+
+Here's what Claude found for me:
+
+Here is a revision without the first sentence:
+Is there a way to quantify how continuous a function is? Continuity is often presented as a binary property - a function is either continuous or it's not. But are there degrees of continuity that would allow us to measure how continuous a given function is?
+It turns out there are a few different ways to think about quantifying continuity:
+
+Pointwise discontinuities: One simple approach is to consider the number or "size" of discontinuities. A function with a single jump discontinuity could be considered "more continuous" than one with many jump discontinuities. Similarly, a function with a removable discontinuity (a "hole" that could be "filled in" to make the function continuous there) is in some sense closer to being continuous than one with an essential or jump discontinuity.
+Modulus of continuity: This is a function ω(δ) that measures the maximum oscillation of f in any interval of length δ. Smaller ω means the function's output varies less and is "more continuous". Lipschitz continuous functions have ω(δ) ≤ Kδ for some constant K.
+Hölder continuity: A function is Hölder continuous with exponent α if |f(x) - f(y)| ≤ C|x-y|^α for some C and all x, y. Larger α means the function is "more continuous". Lipschitz continuity is the α=1 case.
+Degree of smoothness: Differentiability can be seen as a strong form of continuity. So more times differentiable a function is (having continuous 1st, 2nd, etc derivatives), the "more continuous" it is in a sense.
+
+So while ultimately classifying a function as continuous or discontinuous is binary, there are definitely ways to quantify different aspects and degrees of continuity. The appropriate measure depends on the context and what properties of the function we care about. Let me know if you have any other questions!
 One obvious way to proceed is to use measure theory. Discontinuous functions can be categorized based on the measure of the set of their discontinuous points. The Heaviside step function would be considered "almost" continuous because it's continuous almost everywhere (in this case, continuous everywhere except at the origin). While the Dirichlet function $$ 1_\mathbb{Q} $$, which evaluates to 1 on the rational numbers and 0 on the irrational numbers, would be considered "very" discontinuous as it's discontinuous everywhere.
 
 But let's only consider the class of functions that are continuous everywhere. Are there continuous functions that are almost discontinuous? Maybe! Consider the sequence of function
 
-$$ f_m(x) = \begin{cases} 0 & \text{if } x \leq 0, \ mx & \text{if } 0 < x < \frac{1}{m}, \ 1 & \text{if } x \geq \frac{1}{m}. \end{cases} $$
+$$ f_m(x) = \begin{cases} 
+0 & \text{if } x \leq 0,\\ 
+mx & \text{if } 0 < x < \frac{1}{m},\\
+1 & \text{if } x \geq \frac{1}{m}. 
+\end{cases} $$
 
 Every function in the sequence is continuous. But in the limit, our sequence of functions approaches the Heaviside step function. There seems to be a sense in which we are becoming more and more discontinuous as the sequence progresses--even though every term in the sequence is continuous.
 
@@ -35,3 +53,5 @@ We can then make a general rule of thumb: power law assymptotical behavoir in th
 Note that we can even extend this principle the other way. Consider the case where we have take the Fourier transform of the contant function. Which is the same as being of order k^0. Following our pattern, that would imply that the -1th derivative is discontinious. Does that make sense?
 
 Actually yes, this integral famously is yields the dirac delta distribution, which, while technically not a function, can be manipulated still be manipulated under the integral sign. The dirac delta is defined such that if your interval of integration contains x =0, the integral evalues to 1. If it doesn't contain x = 0, then the integral evaluates to 0. One can see that, if we define an indefinite integral starting at a lower bound of negative infinity, the antiderivative of the dirac delta is just the step function. So it does make sense to say that if we think of indefinite integration as take a "negative" derivative, our principle still holds. The -1st derivative does indeed contain the discontinuity.
+
+I'm not sure how I feel about this? What does this actually provide? I guess the colorful highlighting is helpful. It can't *hurt* right? And
