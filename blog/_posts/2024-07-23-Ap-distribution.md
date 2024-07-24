@@ -13,7 +13,7 @@ $$P(A|A_p E) = p$$
 
 This is a fairly strange proposition. But it's useful as it allows us to encode a *belief about a belief*. Here's why it's a useful conceptual tool:
 
-If we say that there is a $1/2$ probability of some proposition $A$ being true, that can represent very different epistemic states. We can be more or less certain that the probability is "really" \(1/2\). 
+If we say that there is a $1/2$ probability of some proposition $A$ being true, that can represent very different epistemic states. We can be more or less certain that the probability is "really" $1/2$. 
 
 For example, imagine that you know for *sure* that a coin is fair: that in the long run, the number of heads flipped will equal the number of tails flipped. Let $A$ be the proposition "the next time I flip this coin, it will come up heads." Then your best guess for $A$ is $1/2$. And importantly, no matter what sequence of coin flips you observe, you will always guess that there is a 50% chance that the next coin flip lands on heads.
 
@@ -33,7 +33,7 @@ A way to think about the proposition $A_p$ is as a kind of limit. When we have l
 
 For any proposition $A$, the probability of $A$ can be found by integrating over our probabilities of $\{A_p\}$
 
-$$p(A) = \int_{0}^{1} dp p(A_p)$$
+$$p(A) = \int_{0}^{1} dp \ p(A_p)$$
 
 where $p(A_p)$ can be said to represent "the probability that, after encountering an infinite amount of evidence, I will give a probability of $p$ to the proposition $A$."
 
