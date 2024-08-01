@@ -7,7 +7,7 @@ mathjax: true
 
 [E.T. Jaynes](https://en.wikipedia.org/wiki/Edwin_Thompson_Jaynes) introduces this really interesting concept called the $A_p$ distribution in his book *Probability Theory*. Despite the book enjoying a cult following, the $A_p$ distribution has failed to become widely-known among aspiring probability theorists. After finishing the relevant chapter in the book, I googled the phrase "Ap distribution" in an attempt to learn more, but I didn't get many search results. So here's an attempt to explain it for a wider audience.
 
-The $A_p$ distribution is a way to give a probability about a probability. It concerns a very special set of propositions $\{A_p\}$ that serve as basis functions for our belief state—somewhat similarly to how the [Dirac delta functions](https://en.wikipedia.org/wiki/Dirac_delta_function) can serve as basis elements for measures over the real line. The proposition $A_p$ says that "regardless of whatever additional evidence that I've observed, the probability that I will assign to proposition $A$ is $p$". It's defined by the rule:
+The $A_p$ distribution is a way to give a probability about a probability. It concerns a very special set of propositions $\{A_p\}$ that serve as basis functions for our belief state about a proposition $A$—somewhat similarly to how the [Dirac delta functions](https://en.wikipedia.org/wiki/Dirac_delta_function) can serve as basis elements for measures over the real line. The proposition $A_p$ says that "regardless of whatever additional evidence that I've observed, the probability that I will assign to proposition $A$ is $p$". It's defined by the rule:
 
 $$P(A|A_p E) = p$$
 

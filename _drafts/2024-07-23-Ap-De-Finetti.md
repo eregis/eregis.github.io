@@ -1,30 +1,25 @@
 ---
 layout: post
-title: "A_p distributin and De Finetti"
+title: "The A_p distribution and Length Scales of Evidence"
 date: 2024-06-13
 mathjax: true
 ---
 
-(But notice that there is no requirement that specifying the distribution over all A_p) fully determines our belief system. There can be propositions B which have bearing on our beliefs about A.
-Thinking out loud here: is there a way to think about this in terms of some sort of kernel?
+In my introductory post on the $A_p$ distribution, I appealed to the intuition that the proposition $A_p$ stands for an "infinite" amount of evidence. It's perhaps a good idea to unpack that intuition.
 
-The mathematics of the A_p distribution turns out to not be very new. It's owed all the way to De Finitti about how distributions over exchangeable binary variables can be expressed using the binomial distribution with different $p$ as a "basis". What is new, however, is the interpretation in terms of metabeliefs that E.T. Jaynes brings.
+The reasoning behind the intuition was that the defining absorption propery of the proposition $A_p$ was similar to how infinite objects interact with finite objects (e.g the cardinality of the union of an infinite set and a finite set is infinite, not infinity plus one or whatever).
 
-How should we visualize the AP distribution. The babyish Venn diagram approach to thinking about probability is to imagine that you have a space and each proposition cover some subset of that space.
+$$P(A|A_p E) = P(A|A_p) = p$$
 
-With this picture, what the A_p distribution describes is a region of the
+This is a nice definition, but an immediate question appeals to mind: what happens when you condition on two $A_p$ distributions?
 
-Part of what makes the A_p distribution feel odd is the same reason why Dirac delta functions make students feel a bit quesy the first time they encounter it: It's pathological in the sense that, given finite time,
+$$P(A|A_p A_q) =???$$
 
-This becomes much more natural if, rather than considering a continuous pro
+This is not fatal--in fact, it isn't even an uncommon problem to have in probability theory. If you condition on two mutually exclusive propositions, then there is no well-defined probability for any attempted computed conditional probabilities.
 
-This then introduces a different notion of what is "strong" evidence. One notion of strong evidence is that it restricts what world you are in (I guess we could say strong, with respect to some proposition). But another notion of strong evidence--strong *meta-evidence*--
 
-It seems normal strong evidence says something about what happens when you try to zoom out. (When you zoom out things will stay red) while strong meta-evidence says something about what will happen when you zoom in (when you zoom in the relative color)
+But what does the A_p distribution *look* like? Envisioning it as a Venn diagram, if you imagine it that $A$ is represented by red and $not-A$ is represented by blue, then the AP distribution looks like fractally red-blue.
 
-So there are two notions of how strong a piece of evidence is: one is that it constrains what region you are allowed to be in
+[Some visualization of fractally blue-and-red]
 
-This is related to the law of total expectation which informally says that if your best point estimate is $$p$$, then in expectation, upon receiving some new piece of evidence, your average opinion shouldn't change.
-You can imagine the A_p distribution almost like a Cauchy surface or something for general relativity or the infinite past in quantum field theory. In the Heisenberg picture of quantum mechanics, states don't evolve over time. So when going from the Schrodinger picture to the Heisenberg picture, you need to choose a representive for each state. One often-made choice is to associate every Heisenberg-state with the associated Schrodinger-state in the limit of the infinite past. So for example the vacuum state is the state which has "nothing in it" in the infinite past.
-
-From this perspective, the Ap distribution is almost like a basis in which to decompose our current beliefs: you describe your current belief in terms of your distribution over future epistemic states that you expect to inhabit.
+This would be taking any such subset (which is equivalent to encountering some evidence $E$) is equivalent to taking some subset.

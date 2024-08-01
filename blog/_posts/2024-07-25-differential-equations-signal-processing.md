@@ -26,11 +26,11 @@ $$ L\{f(t) + g(t)\} = L\{f(t)\} + L\{g(t)\} $$
 
 In my work on bacterial chemotaxis, we often use filters to examine the relationship between changes in ligand concentration $s(t) = \frac{d}{dt} \log c$ and the internal activity of the cell $a(t)$. (To simplify: activity measures how likely a bacterium is to change direction. High activity makes direction changes more probable, while low activity makes them less likely.)
 
-These two mathematical tools represent differing perspectives on biophysics. Differential equations are used when modeling bacteria as biochemical systems, with each component getting its own equation based on theory and experimental data. Signal processing treats bacteria as information processors, focusing on how external signals affect overall behavior. Thus, we are given complementary views of the same phenomena: a low-level, mechanistic description and a high-level, agentic description, respectively.
+These two mathematical tools represent differing perspectives on biophysics. Differential equations are used when modeling bacteria as biochemical systems, with each component getting its own equation based on theory and experimental data. Signal processing treats bacteria as information processors, focusing on how external signals affect overall behavior. We are thus given two complementary views of the same phenomena: a low-level, mechanistic description and a high-level, agentic description, respectively.
 
-When can you go between the two perspectives? The answer is anticlimactic but useful: if you have a linear and time-invariant differential equation, then you can solve it as an integro-equation. This is the makes sense as the time-representation of a filter can be thought of as a [Green's function](https://en.wikipedia.org/wiki/Green%27s_function), so anyone who has taken an electromagnetism class could have seen this punchline coming.
+When can you go between the two perspectives? The answer is anticlimactic but useful: if you have a linear and time-invariant differential equation, then you can solve it as an integro-equation. This makes sense as the time-representation of a filter can be thought of as a [Green's function](https://en.wikipedia.org/wiki/Green%27s_function), so anyone who has taken a graduate electromagnetism class could have seen this punchline coming.
 
-But most differential equations aren't linear? So what do you do then?
+But most differential equations aren't linear. So what do you do then?
 
 One thing that you can do is to linearize your differential equation. You can do this if you expect that the values of your input signal (dependent variable) is going to be small perturbations around a fixed point. Going back to the standard model of chemotaxis, we can linearize it, replacing $s$ and $a$ with perturbations $\Delta s$ and $\Delta a$. This yields the *linearized standard model of chemotaxis*:
 
