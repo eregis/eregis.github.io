@@ -19,8 +19,7 @@ where $$D$ is a diagonal matrix and $$S$$ is a symmetric matrix. This means that
 Consider the following analogy.
 
 
-
-**Pairwise Stationarity**
+# Pairwise Stationarity
 
 Imagine there is a system of banks that have to send money to each other. And for some reason, money is exchanged in the old-fashioned way where each person sends a representative with a briefcase to exchange money with the other banks so representative with a briefcase (so if there $N$ banks, then each bank has $N-1$ representatives corresponding to its relationship with the other banks.)
 
@@ -29,7 +28,7 @@ The way money is exchanged is that each bank must send a certain percentage of i
 Assume that no money enters or leaves the system, so the total amount of money across all the banks is constant. Furthermore assume that we eventually reach a steady state.
 
 
-**Rescaled Symmetric Transition Matrix**
+# Rescaled Symmetric Transition Matrix
 
 Detailed balance is closely related to the thermodynamic arrow of time: systems that obey detailed balance are such that forward trajectories are indistinguishable from backward trajectories. Given that physical intuition, it would seem reasonable to guess that in a system that obeys detailed balance the transition matrix should be symmetric.
 

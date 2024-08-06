@@ -3,6 +3,8 @@ layout: post
 title: "How to Find the PDF of a Function of Random Variable"
 date: 2024-08-01
 mathjax: true
+keywords: probability density function, cumulative distribution function, random variables, function of random variable, Jacobian, Dirac delta function, log-normal distribution, log-uniform distribution
+description: Learn how to derive the probability density function (PDF) of a function of a random variable. Explore different perspectives on this problem, including CDF relationships, Jacobian transformations, and applications to log-normal and log-uniform distributions.
 ---
 
 Let $X$ be a random variable with a [probability density function (PDF)](https://en.wikipedia.org/wiki/Probability_density_function) given by $$f(x)$$ and a [cumulative distribution function (CDF)](https://en.wikipedia.org/wiki/Cumulative_distribution_function) given by $$F(x)$$. Let $Y$ be a random variable such that $h(X) = Y$. Let $g(y)$ and $G(y)$ be the PDF and CDF of $Y$, respectively.

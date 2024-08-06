@@ -14,3 +14,5 @@ For any given parameteric family, there are many different ways that you can par
 Going between the most common parametrizations of the normal distribution is pretty straightfoward, so we rarely focus too much on which specific parameterization that we use.
 
 But in general, there are certain "types" of parameters that appear over and over again with different parametric families.
+
+Besides being common types of parameters, there is also the relationship between location and scale parameters via exponentiation: given a parameterized family with a location parameter, the exponentiation of that family will have a corresponding scale parameters. This isn't too surprising a relationship. Exponentiation is the unique continuous map from the real numbers as an additive group to the positive real numbers as a multiplicative group. (I believe this intuition is also behind the relationship between Lie Algebra and Lie Groups)

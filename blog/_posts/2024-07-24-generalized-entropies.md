@@ -3,6 +3,8 @@ layout: post
 title: "Generalized Entropies"
 date: 2024-07-24
 mathjax: true
+keywords: thermodynamics, statistical mechanics, entropy, Helmholtz free energy, partition function, maximum entropy principle, E.T. Jaynes, thermodynamic potentials
+description: Explore a new perspective on thermodynamic potentials as generalizations of entropy rather than internal energy. Learn about the Helmholtz entropy, its relation to the partition function, and how this view aligns with E.T. Jaynes' maximum entropy principle in statistical mechanics.
 ---
 
 In a standard thermodynamics class, you learn about the [thermodynamic potentials](https://en.wikipedia.org/wiki/Thermodynamic_potential). The way that they are presented is as generalizations of the internal energy $$U$$ to different thermodynamic conditions. And this is corroborated by dimensional analysis: they all have units of energy.

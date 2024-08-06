@@ -3,6 +3,8 @@ layout: post
 title: "Differential Equations and Linear Filters"
 date: 2024-07-25
 mathjax: true
+keywords: biophysics, differential equations, linear filters, chemotaxis, standard model of chemotaxis, signal processing, linearization, non-linear filters, Volterra series
+description: Explore the two primary mathematical tools in biophysics--differential equations and linear filters. Learn about their applications in modeling bacterial chemotaxis, the relationship between these approaches, and the potential for non-linear filter theory in biophysical modeling.
 ---
 
 Compared to other areas of physics, biophysics is light on the mathematical pyrotechnics. In my research, I basically only use two types of mathematical tools: differential equations and linear filters.

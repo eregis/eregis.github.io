@@ -5,7 +5,7 @@ date: 2024-07-25
 mathjax: true
 ---
 
-Information geometry is a niche subfield of mathematics that uses the tools of differential geometry to study parametric families of probability distributions. The key insight is that parametric families of probability distributions have a natural manifold structure. The manifold (called the statistical manifold) is such that each point on the manifold is a probability distribution in the parametric family and the coordinates of the manifold are given the parameter values corresponding to that probability distribution.
+Information geometry is a niche subfield of mathematics that uses the tools of differential geometry to study parametric families of probability distributions. The key insight is that parametric families of probability distributions have a natural manifold structure. The manifold (called the statistical manifold) is such that each point on the manifold is a probability distribution in the parametric family and the coordinates of the manifold are given by the parameter values corresponding to that probability distribution.
 
 Consider the parametric family of normal distributions. It's a two-dimensional statistical manifold where there two coordinates given the mean $\mu$ and the variance $\sigma^2$.
 
@@ -13,7 +13,7 @@ Consider the parametric family of normal distributions. It's a two-dimensional s
 
 Next to its is a graph of probability distribution where x-axis is x and y-axis the probability density p(x); the corresponding red and blue points in the graph of the statistical manifold are plotted as PDFs.]
 
-Manifolds at locally Euclidean spaces. Similar to how a circle locally looks like a line and a sphere locally looks like a plane, while the global structure of the manifold can be rich, in a neighbourhood of a given point, it looks an $n$-dimensional Euclidean space. We call this $n$-dimensional space the *tangent space* at point $p$.
+Manifolds at locally Euclidean spaces. Similar to how a circle locally looks like a line and a sphere locally looks like a plane, while the global structure of the manifold can be rich, in the neighbourhood of a given point, it looks an $n$-dimensional Euclidean space. We call this $n$-dimensional space the *tangent space* at point $p$.
 
 [Insert visualization of a tangent space]
 

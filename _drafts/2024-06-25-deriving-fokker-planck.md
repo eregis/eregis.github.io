@@ -1,15 +1,27 @@
 ---
 layout: post
 title: "Deriving The Fokker-Planck Equation From The Langevin Equation"
-date: 2024-06-13
+date: 2024-08-05
 mathjax: true
 ---
 
-This is yet another "folklore" derivation where "everyone" knows the derivation, but it's hard to find on the internet in one neat place. There are plenty of derivations that derive the Fokker-Planck equation given the Markov transition matrices, but it's harder to find derivations that start with Langevin equation.
+In probability theory, it's important to to differentiate between *random variables* and *probability density functions*. While random variables are uniquely defined by their PDFs, the "calculus"--the rules of manipulation--for random variables versus those for probability density functions are quite different. It's important not to get them confused.
 
-A key idea in probability theory is differentiating between *random variables* and the *probability density function* of the random variables.
+We will be deriving the Fokker-Plank equation from the Langevin equation. The Langevin equation is a stochastic differential equation that was originally used to model the velocity of a Brownian particle acted on by a drag force and thermal fluctuations:
 
-For example, let $X$ and $Y$ be random variables. There is a big difference between Z_1 = \frac{1}{2}(X + Y) and Z_2 whose pdf is a mixture of the pdfs of X and Y: h(x) = \frac{1}
+$$\frac{dX}{dt} = - \lambda X + \eta(t)$$
+
+where $\eta$ is delta-correlated noise (noise whose fluctuations from moment-to-moment are uncorrelated with each other).
+
+The Fokker-Plank equation is partial differential equation that governs the time-evolution of the probability density function. The Fokker-Plank equation gives us the partial time derivitive of the probability density function in terms of a convection term and a diffusion term.
+
+$$\frac{\partial p}{\partial t} = \frac{\partial}{\partial x} [\mu(x,t) p(x,t)] + \frac{\partial^2}{\partial x^2} [D(x,t) p(x,t)]$$
+
+The Langevin equation is formulated in terms of of the infinesstimal calculus of random variables whereas the Fokker-Plank equation treats the flow of probability density.
+
+This is yet another folklore derivation where "everyone" already knows the derivation, but it's hard to find it on the internet presented simply. There are plenty of derivations that derive the Fokker-Planck equation starting with Markov transition matrices, but it's harder to find derivations that start with the Langevin equation.
+
+(If I am not mistaken, the reason why the derivation using Markov transition matrices is more popular is that this was how it was originally derived by Kolgomorov; the Fokker-Plank equation goes by many names, including being called Kolgomorov's forward equation.)
 
 The Langevin equation is an equation about stochastic differential equation. It's about an infinetsimal version of the algebra of random variables.
 

@@ -3,6 +3,8 @@ layout: post
 title: "The Ap Distribution"
 date: 2024-07-23
 mathjax: true
+keywords: Ap distribution, probability theory, E.T. Jaynes, belief about belief, law of total expectation, epistemic states, Bayesian reasoning
+description: Explore the Ap distribution, a concept from E.T. Jaynes' Probability Theory. Learn how it represents beliefs about beliefs and its applications in understanding different epistemic states in probability.
 ---
 
 [E.T. Jaynes](https://en.wikipedia.org/wiki/Edwin_Thompson_Jaynes) introduces this really interesting concept called the $A_p$ distribution in his book *Probability Theory*. Despite the book enjoying a cult following, the $A_p$ distribution has failed to become widely-known among aspiring probability theorists. After finishing the relevant chapter in the book, I googled the phrase "Ap distribution" in an attempt to learn more, but I didn't get many search results. So here's an attempt to explain it for a wider audience.
