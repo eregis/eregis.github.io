@@ -15,7 +15,7 @@ Mathematical physicist [John Baez](https://math.ucr.edu/home/baez/) attempts to 
 
 This definition of entropy seems alright, but it's only words. What is the precise *mathematical* definition of entropy? Restricting ourselves to finite-state systems for simplicity, the entropy of the system is
 
-$$S = - \sum_{i \in X} p_i \log pi$$
+$$S = - \sum_{i \in X} p_i \log p_i$$
 
 where $X$ is the set of states and $p_i$ is the probability that the system is in the $i$th state. 
 
@@ -43,9 +43,9 @@ The book is structured around a simple question: why does hydrogen gas at standa
 
 "What is Entropy?" can be best-appreciated if you've already taken a more standard course in thermodynamics and statistical mechanics. Baez is maximum-entropy-pilled: When the book transitions from information theory to statistical mechanics, he uses the maximum entropy formulation of E.T. Jaynes to motivate the Boltzmann distribution. In fact, it's only at the very end of the book does he derive the much-exalted Laws of Thermodynamics as special cases of the maximum entropy principle, while more traditional presentations of thermodynamics take the laws to be axiomatic.
 
-Despite leaning heavily on the maximum entropy principle, Baez sidesteps all of the Bayesian-versus-frequentist quarelling that Jaynes was famous for engaging in. In an amusing aside, Baez describes Jaynes' book *Probability Theory* as "opiniatied". In context, it's clear he meant it as a compliment, but it still cracked me up.
+Despite leaning heavily on the maximum entropy principle, Baez sidesteps all of the Bayesian-versus-frequentist quarelling that Jaynes was famous for engaging in. In an amusing aside, Baez describes Jaynes' book *Probability Theory* as "opinionated". In context, it's clear he meant it as a compliment, but it still cracked me up.
 
-Is it a problem that Baez grounds the concept of entropy in probability theory, but then makes no attempt to answer the question of what probability 'really' is? If we were attempting to be completely philosophically rigorous, then probably. But I interpret Baez's aims as being more modest. He just wanted to show why the word "entropy" is used for what appears to be many different and only loosely related concepts. I agree with Baez that the philosophical question of probability is too big and contentious to answer satisfactorily in a brief digression.
+Is it a problem that Baez grounds the concept of entropy in probability theory, but then makes no attempt to answer the question of what probability "really" is? If we were attempting to be completely philosophically rigorous, then probably. But I interpret Baez's aims as being more modest. He just wanted to show why the word "entropy" is used for what appears to be many different and only loosely related concepts. I agree with Baez that the philosophical question of probability is too big and contentious to answer satisfactorily in a brief digression.
 
 So does Baez succeed in explaining what entropy is? In my opinion, he does! I would say that this work is the best attempt at answering the question that I've encountered.
 
