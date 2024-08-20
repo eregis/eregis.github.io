@@ -56,3 +56,5 @@ $$\frac{1}{n} = e^{-\beta E_n} \longrightarrow \frac{1}{\beta} \log n$$
 So an energy spectra that grows as
 
 So that is the threshold temperature
+
+What's interesting about the Hagedorn temperature is that it's a nice clear example of physics as computation. Every thermodynamic system, via its partition function, is implicitely computing some complicated series/integral. Though often times to make sense of this, we would need the thermodynamic paramaters (e.g thermodynamic beta) to be extended to be complex-valued--which probably isn't always physically realizable.
