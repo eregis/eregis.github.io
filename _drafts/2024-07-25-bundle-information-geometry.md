@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Tangent Bundle in Information Geometry"
-date: 2024-07-25
+date: 2024-08-21
 mathjax: true
 ---
 
@@ -31,7 +31,7 @@ $$p(x) = \frac{e^{- \beta E(x)}}{Z}$$
 
 where $E$ is the energy of microstate $x$, $\beta$ is thermodynamic beta (the inverse temperature), and $Z$ is the partition function, which sums up over the Boltzman factors our different microstates and ensures that our probability distribution is properly normalized.
 
-In stat mechanics, we start with some energy function given by the microscopic physics and then determine the probability distribution over microstates from the Boltzmann distribution. Here we are going to go in reverse: we start with a probability distribution over $x$ and then we back-calculate what the energy  of each microstate (up to an overall constant) must be in order to have the resultant probability distribution.Then to shift the probability distribution that's to acting on the system such that it shifts the free-energy of each microstate by some commensurate amount. We can then convert it back to a probability distribution.
+In statistical mechanics, we start with some energy function given by the microscopic physics and then determine the probability distribution over microstates from the Boltzmann distribution. Here we are going to go in reverse: we start with a probability distribution over $x$ and then we back-calculate what the energy  of each microstate (up to an overall constant) must be in order to have the resultant probability distribution.Then to shift the probability distribution that's to acting on the system such that it shifts the free-energy of each microstate by some commensurate amount. We can then convert it back to a probability distribution.
 
 Why is this perspective useful? Because "infinitessimal shifts in probability" doesn't lend itself nicely to a physical interpretation while "infinitessimal shifts in free energy" *does* have a nice interpretation. This type of picture becomes especially useful in non-equilibrium stat mechanics where we consider finite-time paths in thermodynamic parameter space (which is a statistical manifold in the quasistatic limit).
 
