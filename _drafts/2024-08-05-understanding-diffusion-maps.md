@@ -11,7 +11,7 @@ In Euclidean space, we know how to calculate the distance between two points: yo
 
 $$d(\mathbf{x}, \mathbf{y} = \sqrt{\sum_{i=1}^n (x_i - y_i)^2}$$
 
-But it's fun to think up other ways to  measure how far two points are from each other. One way is to generalize the distance formula is the $$p$$-metric.
+But it's fun to think up other ways to  ` measure how far apart two points are from each other. One way is to generalize the distance formula is the $$p$$-metric.
 
 $$d_p(\mathbf{x}, \mathbf{y}) = \left(\sum_{i=1}^n (x_i - y_i)^p \right)^{1/p}$$
 
