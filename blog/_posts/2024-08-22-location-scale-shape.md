@@ -31,7 +31,7 @@ $$b + \mathbf{P}(x; s) = \mathbf{P}(x; s + b)$$
 
 Location parameters are the most common type of parameter. In most parametric families, convention dictates that the value of the location parameter equals the mean of the probability distribution. Location parameters are common in probability distributions defined on the entire real line or those with compact support. However, they are less common for distributions that lie on the infinite half-interval $(0, \infty)$. Distributions on the infinite half-interval (e.g., the exponential distribution) usually have some physical interpretation that makes zero special, breaking the implicit translation invariance typical of parametric families featuring a location parameter.
 
-![Normal distributions with different location parameters](/assets/images/location-scale-power/normal_distributions.png)
+![Normal distributions with different location parameters](/assets/location-scale-power/normal_distributions.png)
 
 However, one type of parameter features prominently in parametric families whose domain is the infinite half-interval: [scale parameters](https://en.wikipedia.org/wiki/Scale_parameter). A scale parameter governs the 'spread' of the probability distribution: a large value of the scale parameter corresponds to a more spread-out distribution, while a small value corresponds to a more concentrated one. This is an active interpretation of the scale parameter. Alternatively, one could take a passive interpretation where the actual physical quantity remains unchanged, but our perception of it changes. This perceptual change can be visualized as a 'zooming process' where large scale parameters correspond to zooming in and small values to zooming out. Or it could be thought of as changing the units of measurement, where 'smaller' units (like inches) correspond to large values of the scale parameter and 'larger' units (like miles) correspond to small values.
 
@@ -45,7 +45,7 @@ $$\mathbf{E}(t; \tau) = \frac{1}{\tau} e^{-\frac{t}{\tau}}$$
 
 the parameter $\tau$ is a scale parameter that is equal to the mean of the distribution. But in the case of the normal distribution centered at the origin, when parametrized by the standard deviation $\sigma$, $\sigma$ functions as a scale parameter. $\sigma$ is not associated with the mean of the distribution, but the *variance* (specifically, $\sigma$ is the square root of the variance).
 
-![Exponential distributions with different scale parameters](/assets/images/location-scale-power/exponential_distributions.png)
+![Exponential distributions with different scale parameters](/assets/location-scale-power/exponential_distributions.png)
 
 Location and scale parameters can actually be related by exponentiation of random variables. Let $\mathbf{P}(x; \mu)$ and $\mathbf{Q}(x; a)$ be two parametric families related by the equation:
 

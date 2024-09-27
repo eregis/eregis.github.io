@@ -11,7 +11,7 @@ keywords: [information geometry, statistical manifold, differential geometry, pr
 
 Consider the parametric family of normal distributions. It forms a two-dimensional statistical manifold. While there are many ways that we can parametrize the family of normal distributions, one canonical choice is to choose as coordinates the mean $\mu$ and the variance $\sigma^2$.
 
-![Statistical Manifold and Normal Distributions](/assets/what-is-information-geometry/images/statistical_manifold_and_distributions.png)
+![Statistical Manifold and Normal Distributions](/assets/what-is-information-geometry/statistical_manifold_and_distributions.png)
 
 In the image above, we have on the left a coordinate chart with two colored dots corresponding to two different normal distributions with differing values for their mean and variance. On the right, we plotted the probability density functions for each of the distributions on the same set of coordinate axes. If you imagine extending our coordinate chart to the entire half-plane ($- \infty < \mu < \infty$;$0 < \sigma^2 < \infty$), we would be able to represent every (non-degenerate) normal distribution on the statistical manifold.
 

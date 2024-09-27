@@ -41,10 +41,10 @@ where $p(A_p)$ can be said to represent "the probability that, after encounterin
 
 For the fair coin, our belief in $A_p$ space would be represented by a delta function at $p=1/2$.
 
-![Fair Coin A_p Distribution](/assets/images/ap_distribution/fair_coin_ap_distribution.png)
+![Fair Coin A_p Distribution](/assets/ap_distribution/fair_coin_ap_distribution.png)
 
 For the biased coin (where we don't know the bias), our belief would be represented by two deltas of weight 1/2 at $p=0$ and $p=1$.
 
-![Biased Coin A_p Distribution](/assets/images/ap_distribution/biased_coin_ap_distribution.png)
+![Biased Coin A_p Distribution](/assets/ap_distribution/biased_coin_ap_distribution.png)
 
 Both distributions assign a probability of $1/2$ to $A$. But the two distributions greatly differ in their variance in $A_p$ space.

@@ -43,7 +43,7 @@ $$\delta(ax) = \frac{1}{|a|} \delta(x)$$
 
 This can be most easily seen by considering the Dirac delta function as the limit of some sequence of narrower and narrower distributions. If *before* passing to the limit, we scale each of the distributions in our sequence by $a$, we can demonstrate the desired result.
 
-![Dirac delta function visualization](/assets/images/functions-random-variables/dirac-delta.png)
+![Dirac delta function visualization](/assets/functions-random-variables/dirac-delta.png)
 
 Next, we notice that if $x_0$ is a root of some function $h$, then by Taylor expansion we have that near $x_0$:
 
@@ -89,7 +89,7 @@ Then we take the derivative to get that
 
 $g(y) = \frac{1}{y} \frac{1}{\sqrt{2 \pi \sigma^2}} e^{- \frac{(\log y - \mu)^2}{2 \sigma^2}}$
 
-![Log-normal distribution](/assets/images/functions-random-variables/log-normal.png)
+![Log-normal distribution](/assets/functions-random-variables/log-normal.png)
 
 # The log-uniform distribution
 
@@ -103,4 +103,4 @@ $$g(y) = \frac{1}{y}$$
 
 The log-uniform distribution is also called the reciprocal distribution due to the functional form of its PDF.
 
-![Log-uniform distribution](/assets/images/functions-random-variables/log-uniform.png)
+![Log-uniform distribution](/assets/functions-random-variables/log-uniform.png)
