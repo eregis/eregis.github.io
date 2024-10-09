@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Thoughts on the 2024 Nobel Prize in Physics"
+date: 2024-10-09
+mathjax: true
+keywords: Nobel Prize, Physics, John Hopfield, Geoffrey Hinton, AI, Machine Learning, Neural Networks
+description: A personal reflection on the controversial 2024 Nobel Prize in Physics awarded to John Hopfield and Geoffrey Hinton for their work in machine learning and neural networks, discussing the implications for the field of physics and the growing influence of AI research.
+---
+
+A couple of days ago, the Nobel Prize in Physics was awarded! And to everyone's surprise, it was awarded to John Hopfield and Geoffrey Hinton. John Hopfield is a physicist at Princeton who is best known for the Hopfield network which models neural networks as a spin glass system. And Geoffrey Hinton is a machine learning researcher (formerly at Google before quitting for AI safety reasons) who is best known for Boltzmann machines. Both of them are esteemed researchers, but they aren't known for their contributions *to* physics. Rather, they are known for using ideas and techniques from physics (specifically statistical physics) to understand neural networks—which would best be put under computer science if you had to choose a specific field to describe their work (and indeed, Hinton has already been awarded a Turing award, the most prestigious award in computer science). What was the committee's rationale for awarding them the Nobel Prize in *Physics*? The press release didn't do much to clarify matters. It said that Hopfield and Hinton were awarded "for foundational discoveries and inventions that enable machine learning with artificial neural networks".
+
+This award selection has caused considerable controversy, especially among physicists (as can be seen by [r/physics subreddit reaction to the news](https://www.reddit.com/r/Physics/comments/1fyx6yd/yeah_physics/)). I personally learned the news during my Statistical Optimal Transport class. The professor, who knows that I am a physics graduate student with an interest in machine learning, asked me with a sort of wry smile about my thoughts on this year's Nobel Prize in physics. I hadn't heard the news (I am ridiculously unplugged from any news), so he told me who had won.
+
+My first reaction was happiness. I love Hopfield and Hinton! While I am not as familiar with their work on a technical level as I should be, they both are at the very tippy-top of my reading list. And just by casually strolling through Google Scholar pages, I can tell that their work is exactly up my alley. What's not to love about applications of statistical physics to novel settings?
+
+My second reaction was confusion. Wait, the Nobel Prize... for physics?!? Hopfield is at least professionally employed as a physicist, but I wasn't aware of his work being quite Nobel Prize-worthy (I'm not fully up-to-date on the relative stature of different contributions to the field). As far as I know, Hopfield's work is more theoretical—applying statistical physics to understand neural networks. However, I haven't heard of his theories being "confirmed" or instrumental in any specific experimental or technological breakthrough that's widely recognized. Hinton's case was even more inexplicable, as I've never heard him described as doing physics research.
+
+Why didn't the Nobel committee choose a more traditional choice like Shor (known for his work in quantum computing)? Or if you are suspicious that quantum computing is overhyped, then what about Aharonov whose most famous contribution—the Aharonov-Bohm effect—is learned by every graduate student in the country in their quantum mechanics class?
+
+The motivations of the Nobel committee became less mysterious when the [Nobel prize in chemistry was announced](https://www.nobelprize.org/prizes/chemistry/). Half of the award was given jointly to Demis Hassabis and John Jumper for their work developing AlphaFold.
+
+I'm not in tune with how the chemistry community is reacting to this news, but this one seems more reasonable. If there were a theoretical advance that allowed you to predict protein structures beforehand, everyone would agree that it would be Nobel Prize worthy. I don't see why an expertly designed neural network would be such a large leap of logic—especially because I remember that before AlphaFold was released, my impression was that those with expertise thought we were decades away from solving the protein-folding problem.
+
+But when you consider both decisions jointly, the optics become a bit concerning. It looks a lot like the Nobel committee jumping on the AI hype-cycle—which contrasts with the image of the Nobel Prize as being a timeless award that is above the eddies of intellectual fashion. That being said, I don't think AI is a fad, so I don't think this will age poorly. But it still feels a bit unsettling.
+
+It seems like a yearly tradition at this point that every time the Nobel Prize in Physics is awarded, the jubilation at the success of winners is mixed in with concerned murmurings at the state of physics as a field. "What does it say about the state of physics that they have to give our most prestigious award to computer scientists?" But I would interpret the selection of the Nobel Prize in physics as more of an indication of the hype surrounding ML, than an indictment of physics.
