@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "'Field Guide to Probability Distributions' by Gavin Crooks"
-date: 2024-09-27
+date: 2024-09-28
 mathjax: true
+keywords: probability distributions, Gavin Crooks, statistical physics, probability theory, Pokémon, statistical manifold, Grand Unified Distribution, exponential families, order statistics
+description: Dive into Gavin Crooks' "Field Guide to Probability Distributions," a comprehensive exploration of common probability distributions in mathematics, statistics, physics, and engineering. Learn about the hierarchical structure of distributions, their interconnections, and the intriguing concept of the Grand Unified Distribution.
 ---
 
 My first intellectual obsession was Pokémon. I watched the animated television show religiously and played Pokémon Silver on my Game Boy Advance SP until the late hours of the night.
