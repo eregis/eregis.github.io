@@ -5,4 +5,5 @@ date: 2024-06-13
 mathjax: true
 ---
 
-The renormalization group is the most important idea 
+If I had to name one conceptual idea that is extremely important to physicists, but almost
+entirely unknown to people outside of physics, it would be the renormalization group.
