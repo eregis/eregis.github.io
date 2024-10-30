@@ -68,7 +68,7 @@ have an expectation less than or equal to the previous one.
 
 ![Visual proof of Markov's inequality showing probability mass transformation](/assets/markov-inequality-explained/visual_proof.png)
 
-What is the expectation of this final distribution? There would be two contributions to the expectation: the probability mass at $x = 0$ multiplied by 0 and the probability mass at $x = a$ multiplied by $a$. The first term vanishes so we are left with an overall expectation $P(X \ge a) \times a$. We can then compare this expectation to the expectation of our original distribution and then divide by $a$ to get Markov's inequality:
+What is the expectation of this final distribution? There would be two contributions to the expectation: the probability mass at $x = 0$ multiplied by 0 and the probability mass at $x = a$ multiplied by $a$. The first term vanishes so we are left with an overall expectation $P(X \ge a) \cdot a$. We can then compare this expectation to the expectation of our original distribution and then divide by $a$ to get Markov's inequality:
 
 $$P(X \ge a) \cdot a \le \mathbb{E}[X] \longrightarrow P(X \ge a) \le \frac{\mathbb{E}[X]}{a}$$
  
