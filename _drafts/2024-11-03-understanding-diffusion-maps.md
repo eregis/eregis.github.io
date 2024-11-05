@@ -53,10 +53,23 @@ The total variation distance is the supremum of the absolute difference in proba
 
 In our case, the way you can think about it: an event is a subset of $\mathbbf{R}$ (not all subsets are measurable but we won't worry about that). If we express our measure as a probability density function, the total variation distance is simply what you when you integrate over the domain where one function's density is greater than the other function (it doesn't matter which function you choose). This is a nice generalization of our example of the $n$-sphere.
 
-#Diffusion Maps
+# Distance in the Maze
 
-The previous examples were all considering notions of distance on $$\mathbb{R}^n$$ 
-which is a well-behaved space with an intuitive notion of distance. 
+Now let's consider the harder case of measuring distance in a maze.
+
+Because of the walls, measuring distance "as the bird flies" is not going to work. So how do we measure distance on the maze?
+
+If we are feeling 
+
+You've probably experienced this while cooking: rooms that are closer to the kitchen will have a stronger lingering scent than those rooms that are more distance. If you wanted to you could use that as a distance measure.
+
+[Visualization of a floor pan of a generic house.]
+
+So how about we go about
+
+#Distance in Data Space
+
+
 Let's consider a harder example: determining distance between vertices on an undirected graph.
 
 One way you could determine distance would be to take the shortest path between two points. But this has potential problems depending on your intepretation of the graph.
