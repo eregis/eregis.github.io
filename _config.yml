@@ -16,6 +16,7 @@ description: Physics graduate student at Yale University
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Collections
 collections:
