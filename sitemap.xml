@@ -1,9 +1,8 @@
 ---
 layout: null
-sitemap:
-  exclude: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {%- for post in site.posts -%}
     <url>
@@ -12,13 +11,10 @@ sitemap:
     </url>
   {%- endfor -%}
   {%- for page in site.pages -%}
-    {%- unless page.sitemap.exclude -%}
-      {%- if page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' -%}
-      {%- else -%}
-        <url>
-          <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-        </url>
-      {%- endif -%}
+    {%- unless page.url contains '.xml' or page.url contains 'assets' or page.url contains '404' -%}
+      <url>
+        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+      </url>
     {%- endunless -%}
   {%- endfor -%}
 </urlset>
