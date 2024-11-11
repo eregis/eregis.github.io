@@ -18,7 +18,7 @@ distribution, it has a PDF of the form:
 
 $$g(x) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}}$$
 
-Clearly, at any given point $y$, we can calculate the PDF at $y$ using only elementary operations/functions 
+Clearly, at any given point $x$, we can calculate the PDF at $x$ using only elementary operations/functions 
 (in this case, squaring and exponentiation). But what about the CDF? The standard expression for the CDF $\Phi$ of the normal
 distribution is
 
@@ -31,7 +31,7 @@ Unfortunately, while I'm pretty sure that that the derivative of an elementary f
 that the antiderivative of an elementary function is always another elementary function. There is no closed-form expression for the CDF of the 
 normal distribution in terms of recognizable "simple" functions.
 
-(If this seems odd, consider the fact that $\pi$---or any other transcendal number---can't be expressed in terms of rational numbers
+(If this seems odd, consider the fact that $\pi$---or any other transcedental number---can't be expressed in terms of rational numbers
 by way of a finite application of addition, multiplication, and taking radicals.)
 
 So what do we do?
@@ -79,7 +79,9 @@ For simplicity, let's set $m$ and $\beta$ equal to one. So our joint probability
 
 $$p(v_x, v_y) \propto e^{-\frac{(v_x^2 + v_y^2)}{2}}$$
 
-But what we want is not the joint probability distribution for the velocities, but the probability distribution for the speed
+Note that both $v_x$ and $v_y$ are normally-distributed random variables. That will be important later.
+
+For now, what we want is not the joint probability distribution for the velocities, but the probability distribution for the speed
 $s = \sqrt{v_x^2 + v_y^2}$. To do so, we will change variables from $(v_x, v_y) \rightarrow (s, \phi)$ 
 where $\phi$ is the angle (WLOG) with respect to the x-axis. 
 When performing a change of variables, the probability density is multiplied by the determinant of the Jacobian:
@@ -113,7 +115,7 @@ $$\hat{p}(s) \propto s e^{-\frac{s^2}{2}}$$
 which shows that the speed $s$ is indeed Rayleigh-distributed as claimed. We
 can then use the fact that the individual components of the velocity $v_x$ and $v_y$ are related to the speed $s$ in the following way:
 
-$$v_x = s \cos \phi \quad v_y = s \sin \phi$$
+$$v_x = s \cos \phi \quad \text{and} \quad v_y = s \sin \phi$$
 
 $s$ is Rayleigh-distributed and $\phi$ is uniformally-distributed. We know how to sample from both of these distributions using
 inverse transform sampling. If we plug in our sampled value for $s$ and our sampled value for $\phi$ into the above formulas, we will get simultaneous samples for $v_x$ and $v_y$---which are both normally-distributed quantities.
