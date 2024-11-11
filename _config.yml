@@ -5,7 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Graduate student in Biophysics at Yale University.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://eregis.github.io/" # Replace with your actual GitHub Pages URL
+url: "https://eregis.github.io" # Replace with your actual GitHub Pages URL
 github_username: eregis # Replace with your actual GitHub username
 
 # Author information
