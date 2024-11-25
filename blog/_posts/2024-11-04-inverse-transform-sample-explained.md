@@ -3,6 +3,8 @@ layout: post
 title: "Inverse Transform Sampling Explained"
 date: 2024-11-04
 mathjax: true
+description: "A detailed explanation of inverse transform sampling, demonstrating how to generate random samples from any probability distribution using uniform random variables and quantile functions."
+keywords: probability, statistics, sampling, inverse transform sampling, random variables, uniform distribution, exponential distribution, quantile function, cumulative distribution function
 ---
 
 Consider the easiest sampling problem: sampling from a univariate distribution  where we have an analytical expression for the probability density function $g$ (including the normalization constant). How does one practically go about sampling from $g$? As in, what is a set of instructions that you can give a computer such that are confident that the the produced number will be drawn from the intended distribution? 

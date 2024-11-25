@@ -3,6 +3,8 @@ layout: post
 title: "'Statistical Optimal Transport' by Sinho Chewi"
 date: 2024-10-30
 mathjax: true
+description: "An exploration of optimal transport theory, Wasserstein distances, and their applications in statistics, covering fundamental concepts from the Monge problem to Wasserstein geometry and barycenters."
+keywords: optimal transport, Wasserstein distance, statistics, Monge problem, Kantorovich problem, gradient flows, barycenters, probability theory, convex optimization
 ---
 
 A common problem in statistics is that of sampling. Let's say we have some unknown distribution $\pi$. We can ask

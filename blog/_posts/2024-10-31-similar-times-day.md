@@ -3,6 +3,8 @@ layout: post
 title: "Time is (Topologically) A Circle"
 date: 2024-10-31
 mathjax: true
+description: "A meditation on how we perceive and experience the flow of daily time, exploring the differences between clock time and psychological time through the lens of topology and geometry."
+keywords: time perception, topology, psychological time, circadian rhythm, temporal distortion, daily cycles, cognitive psychology, mental models
 ---
 
 I missed a doctor's appointment the other day. I made a pretty typical calendar mistake. My doctor emailed

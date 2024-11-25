@@ -3,6 +3,8 @@ layout: post
 title: "How To Sample From A Univariate Gaussian"
 date: 2024-11-05
 mathjax: true
+description: "A step-by-step explanation of how to generate samples from a normal distribution using the Rayleigh distribution and polar coordinates, with insights from statistical physics."
+keywords: probability, statistics, gaussian distribution, normal distribution, rayleigh distribution, sampling methods, statistical physics, boltzmann distribution, polar coordinates
 ---
 
 In [yesterday's post]({% post_url 2024-11-04-inverse-transform-sample-explained %}), I explained inverse transform sampling, 

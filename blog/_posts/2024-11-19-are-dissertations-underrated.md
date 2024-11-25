@@ -3,6 +3,8 @@ layout: post
 title: "Are Dissertations Underrated?"
 date: 2024-11-19
 mathjax: true
+description: "An exploration of PhD dissertations as valuable but often overlooked learning resources for graduate students bridging the gap between textbooks and current research papers."
+keywords: PhD dissertations, academic resources, graduate education, self-learning, sampling theory, optimization, pedagogical materials, academic writing
 ---
 
 When trying to master a new subfield, there can be a bit of gap in resources.

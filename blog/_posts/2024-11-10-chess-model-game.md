@@ -3,6 +3,8 @@ layout: post
 title: "Chess As The Model Game"
 date: 2024-11-10
 mathjax: true
+description: "An exploration of chess as a model system for understanding expertise, learning, and artificial intelligence, drawing parallels between chess and fields like cognitive science and thermodynamics."
+keywords: chess, model games, expertise, cognitive science, AlphaZero, Stockfish, computer chess, chunking, pattern recognition, aging curves, artificial intelligence
 ---
 
 Other than Pokemon, most of my YouTube consumption is comprised of chess analysis videos. This might surprise people because 
