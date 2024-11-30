@@ -33,7 +33,7 @@ $\mu$ is the mean of $X$. Let's say we know that the variance of $X$ is $\sigma^
 
 $$
 \begin{aligned}
-\mathbb{P}(|X - \mu| \ge k^2 \sigma^2) &= \mathbb{P}(\sqrt{Y} \ge k \sigma) \\ 
+\mathbb{P}(|X - \mu| \ge k \sigma) &= \mathbb{P}(\sqrt{Y} \ge k \sigma) \\ 
 &= \mathbb{P}(Y \ge k^2 \sigma^2) \\
 &\le \frac{\mathbb{E}(Y)}{k^2 \sigma^2} \\ 
 &= \frac{1}{k^2}

@@ -25,7 +25,7 @@ $P(A)$ is called the *prior*. It's the probability that you give for $A$ happeni
 To go from your prior to posterior, you have to "update" based on the encountered evidence. This is given by the odds ratio $$\frac{P(B|A)}{P(B)}$$. The key to understanding this term is that what we care about is not the raw probability of $B$ happening, 
 *but on how much more likely $B$ is to happen in worlds where $A$ happens as well*.
 
-It helps to consider the two cases: $P(B\|A) > P(B)$ and $P(B\|A) < P(A)$.
+It helps to consider the two cases: $P(B\|A) > P(B)$ and $P(B\|A) < P(B)$.
 
 In the case that $P(B\|A) > P(B)$, $B$ is *more* likely to happen in worlds that $A$ happens as well. So the ratio $\frac{P(B\|A)}{P(B)}$ is greater than one. This means that our posterior probability of $A$ is higher than our prior probability.
 

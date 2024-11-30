@@ -25,7 +25,7 @@ Here is a personal example. I've been busy learning about sampling. And one of t
 
 This analogy is beautiful. There is one problem: I don't know anything about optimization! I guess I could go off and read a couple of textbooks to fix that problem. But from afar, optimization seems like a *huge* field. Where would I even start? What I need is a distillation of the ideas and algorithms from optimization that are most relevant to me.
 
-This dilemna has been lurking in the back of my mind for a while, but I didn't have any active plan on how I was going to resolve it. But one day, on a lark, I decided to start reading [Ashia Wilson's dissertation on the use of Lypanuv functions in optimization](https://escholarship.org/content/qt1116c975/qt1116c975_noSplash_46300ab4fc767adf2a323120f892f0c0.pdf). She attended the recent sampling conference at Yale and is co-authors with Andre Wibisono, so I knew that her work might be of interest to me. As luck would have it, in her dissertation, I found exactly what I was looking for!
+This dilemna has been lurking in the back of my mind for a while, but I didn't have any active plan on how I was going to resolve it. But one day, on a lark, I decided to start reading [Ashia Wilson's dissertation on the use of Lyapunov functions in optimization](https://escholarship.org/content/qt1116c975/qt1116c975_noSplash_46300ab4fc767adf2a323120f892f0c0.pdf). She attended the recent sampling conference at Yale and is co-authors with Andre Wibisono, so I knew that her work might be of interest to me. As luck would have it, in her dissertation, I found exactly what I was looking for!
 
 ![Table from Ashia Wilson's dissertation](/assets/dissertations-underrated/table-ashia-wilson.png)
 
