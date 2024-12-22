@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thinking, Fast and Slow Time Scales"
-date: 2024-11-24
+date: 2024-12-09
 mathjax: true
 ---
 
@@ -56,7 +56,7 @@ the fully-specified reaction rate network is a complete graph---one where every 
 But in practice, the reaction networks we actually use are relatively *sparse*---where for any given state, transitions are only possible
 to some small subset of the remaining states. Where does this discrepancy come from?
 
-First, it's an empirical reality that *all* complex systems have reactions occurring at varying time scales, and these time scales
+First, it's an empirical reality that all complex systems have reactions occurring at varying time scales, and these time scales
 span many orders of magnitude. For example, consider the time scales of the human body. 
 There is the time scale of thermal molecular motion. There is the time scale of the subtle, pendulum-like swaying of limbs. There is 
 the time scale of blinking, the time scale of circadian rhythms, the time scale of hormonal changes like puberty or menopause. 
