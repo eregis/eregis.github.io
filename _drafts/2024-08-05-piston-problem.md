@@ -22,3 +22,7 @@ You also need to supply extra, physical information to calculate non-equilibrium
 
 In the problem of the one-dimensional piston, we have that there is
 
+
+Just for concreteness: let's say you have a piston and you compress it in some finite time. Because you are compressing it in some finite time, it's not going to be equilibrium during the process. For example, at equilibrium, gas is uniformly distributed in a piston. But you would expect that gas would be probabilisticly be bunched towards the moving end of the piston. This defines the forward process.
+
+But imagine after compressing the piston, you let it sit for a while such that the piston is now at equilibrium (e.g not more bunching near the moving end of the piston). Then if you   If you And I told him "Yeah, there's also the Jensen-Shannon Divergence". And he was like "What's that?"
