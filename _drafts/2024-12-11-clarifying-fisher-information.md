@@ -12,9 +12,12 @@ the terminology and notation here is weirdly non-standard: different literatures
 *gradients*--but different notions of the Fisher Information will have different notion of the gradients and the gradient will
 act on different transforms
 
-# Information Geometry Fisher Information
+#Fisher Information from Information Geometry
 
-The original Fisher information that you will see in context like Information
+The original Fisher information that you will see in context like Information Geometry. It's Let $p(x\theta)$ be a
+parametric family of probability distributions. Then the Fisher Information is given as
+
+$$\
 
 # Fisher Information from Score-Based Generative Models
 
@@ -24,4 +27,24 @@ variational inference where you are trying to minimize the KL divergence between
 
 # The Relative Fisher Information
 
-This is also known as the relative fisher information. It's a pretty direct analogy between the how the KL divergence measures the *relative* entropy between the source distribution and the target distribution.
+This is also known as the relative fisher information. 
+It's a pretty direct analogy between the how the KL divergence measures the *relative* entropy between 
+the source distribution and the target distribution.
+
+The relative Fisher Information is given as 
+
+$$\mathbb{E}_p[\nabla \log(\frac{dp}{dq})]$$
+
+The relative Fisher information is the quantity that appears in things like the Poincare and log-Sobolev
+inequalities (These are called "functional inequalities").
+
+Somewhat confusingly, there is an alternative form that the relative Information sometimes takes
+
+$$\mathbb{E}_q[\nabla sqrt{f}]$$
+
+But this expression can actually be shown to be equivalent to the definition of the relative Fisher information.
+
+The definition of the relative Fisher Information. A general property of the Fisher information is that.
+
+As I explained in my previous post, the score is just the force, so the Fisher Information quantifies the extent
+to which two distributions tend to locally look the same from each other.
