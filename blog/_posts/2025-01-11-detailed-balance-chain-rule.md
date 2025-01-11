@@ -6,7 +6,11 @@ mathjax: true
 ---
 *Alternative Title: Detailed Balance Is Just Chain Rule*
 
-A Markov chain is a system where the probability distribution of the next state depends solely on the current state, not on the past history. A Markov chain is said to obey detailed balance if, at equilibrium, any sequence of states is equally probable when run forwards or backwards. In physical terms, detailed balance means a system's dynamics look the same whether time runs forwards or backwards. To illustrate the detailed balance condition, consider the following two Markov chains, both defined on a triangle graph:
+A Markov chain is a system where the probability distribution of the next state depends solely on the current state,
+not on the past history. The chain is said to obey detailed balance if, at equilibrium, 
+any sequence of states is equally probable when run forwards or backwards---meaning the system's 
+dynamics look the same in either time direction. To illustrate this condition, 
+consider the following two Markov chains, both defined on a triangle graph:
 
 ![Two Markov chains on triangle graphs, one with detailed balance (all transitions 1/2) and one without (1/3 clockwise, 2/3 counterclockwise)](/assets/detailed-balance-chain-rule/two-markov-chains.png)
 
@@ -73,7 +77,10 @@ which is precisely the detailed balance condition!
 
 In general, it seems important to be able to interpret transition matrices/kernels as conditional probability
 densities---and vice versa. I've seen this intuition be load-bearing in a couple of different places, most notably
-when deriving the [Kolgomorov forward equation](https://en.wikipedia.org/wiki/Kolmogorov_equations#Continuous-time_Markov_chains).
+when deriving the [Kolgomorov forward equation](https://en.wikipedia.org/wiki/Kolmogorov_equations#Continuous-time_Markov_chains). This is important in this case because it explains why
+the naive definition of detailed balance---that the transition matrix $P$ is symmetric--is *not* correct.
+We care about symmetry between the *joint* probabilities, not the conditional probabilities.
+
 
 A way to think about detailed balance is that it captures the notion of being *locally* at equilibrium. If we return to our analogy of imagining the system as containing fluids with wells and aqueducts, we said that steady state corresponds to when, for each node, the total fluid it sends out equals the total fluid it receives. Detailed balance corresponds to a more stringent condition: rather than just requiring that the *total* flows in and out match, we now require that for *each pair of states*, the fluid flowing from one to the other equals the fluid flowing in the reverse direction.
 
@@ -97,7 +104,7 @@ in equilibrium with each other.
 
 One last thing: an important property of detailed balance is that it holds for sequences of arbitrary length. However, it turns out that if your Markov chain is reversible for length-2 sequences, then it will be reversible for length-$n$ sequences. To prove this, we can proceed by induction: we will show that if a Markov chain has reversible $n$-sequences, this implies that all $(n+1)$-sequences are also reversible.
 
-Assume that $n$-sequences are reversible, meaning for any states $a, b, ..., k$:
+Assume that $n$-sequences are reversible where $n \ge 2$, meaning for any states $a, b, ..., k$:
 
 $$p(a_1, b_2, ..., j_n) = p(j_1, ..., b_{n-1}, a_n)$$
 
@@ -109,7 +116,15 @@ But because we have the Markov condition, we can simplify the conditional probab
 
 $$p(a_1,...,k_{n+1}) = p(a_1,... ,j_n) \times p(k_{n+1}|j_n)$$
 
-By our inductive hypothesis, we know that $p(a_1,...,j_n) = p(j_1,...,a_n)$, and by 2-sequence detailed balance, we know $p(j_n)p(k_{n+1}\|j_n) = p(k_{n+1})p(j_n\|k_{n+1})$. Therefore:
+
+A coupling things to keep in mind before we present the full proof:
+
+* As we have $n$-sequence detailed balance, we also have 2-sequence detailed balance. By 2-sequence detailed balance, we know $p(j_n)p(k_{n+1}\|j_n) = p(k_{n})p(j_{n+1}\|k_n)$ for any pair of states $j$ and $k$. 
+* Because we are at steady state, we have time-translation symmetry for all marginals, conditionals, and joint
+probabilities with respect to location in the sequence. For any integers $m,n$, we have $p(i_n) = p(i_m)$, 
+$p(j_{n+1}|i_n) = p(j_{m+1}|i_m)$, and $p(a_{1 + m},..., j_{n+m}) = p(a_1,..., j_{n})$
+
+We can then show that:
 
 $$
 \begin{align*}
