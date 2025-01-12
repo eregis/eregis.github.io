@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Score is Just The Force"
+title: "The Score Is Just The Force"
 date: 2025-01-12
 mathjax: true
 ---
