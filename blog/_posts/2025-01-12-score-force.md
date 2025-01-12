@@ -37,6 +37,8 @@ Extending the analogy, since $\nabla \log p(x) = -\nabla V(x)$,
 the score is exactly [the force](https://en.wikipedia.org/wiki/Conservative_force)!
 Perhaps we should call these "force-based generative models" instead.
 
+![Score as a force field](/assets/score-is-force/score-force-field.png)
+
 In the physical world, particles tend to gather in regions of lower potential energy because forces push them towards local minima,
 fighting against random thermal fluctuations. Our generative models are doing exactly the
 same thing---using the learned force field to push samples towards regions of high probability. 
