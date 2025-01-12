@@ -117,7 +117,7 @@ But because we have the Markov condition, we can simplify the conditional probab
 $$p(a_1,...,k_{n+1}) = p(a_1,... ,j_n) \times p(k_{n+1}|j_n)$$
 
 
-A coupling things to keep in mind before we present the full proof:
+A couple things to keep in mind before we present the full proof:
 
 * As we have $n$-sequence detailed balance, we also have 2-sequence detailed balance. By 2-sequence detailed balance, we know $p(j_n)p(k_{n+1}\|j_n) = p(k_{n})p(j_{n+1}\|k_n)$ for any pair of states $j$ and $k$. 
 * Because we are at steady state, we have time-translation symmetry for all marginals, conditionals, and joint
