@@ -26,3 +26,115 @@ While Nate obviously feels kindred spirit with many of the Riverians that he dis
 Given these above sources, Silver doesn’t add anything too new. He doesn’t have the truly deep insights into effective altruism that someone like Zvi has. Nor does he have the technical knowledge that people like Levine and Mackenzie have. While Silver did have access to nver before seen interviews with SBF, including after the collapse of FTX. The quotes were not that interesting; just a lot of rationalization covering the obvious fact that he was going to spend the better part of his adult life behind bars. Indeed Nate Silver himself undermines the interestingness of SBF, saying that SBF seems kinda smart, but he never really understood all of the boy genius hype surrounding him. And that’s my take on SBF: despite being the center of one of the biggest financial frauds in history and being affiliated with one of the most intellectually dynamic and interesting subcultures, SBF is, above all else, weirdly boring for a supervillian. He just seemed like a guy who was incredibly oppurtunistic and willing to lie and deceive to get his way, and he fit an image of what people thought a wunderkind fintech founder is supposed to look like between the shorts, power naps, and floppy Jewish hair.
 
 The counterpart of the River is the Village. If the River is risk-neutral, then the Village is risk-averse. If the River is dynamic, the Village is static. If the River is tech and the quantitative parts of finance, then the Village is academia, the media, and the government. It’s a familiar enough typology. Silver doesn’t spend too much time on the village, except in passing to contrast it with the River or when the River-Village cultural conflict is especially salient in a given context (e.g the tech-media power struggle).
+
+Effective altruism, and the adjacent but more loosely defined intellectual movement called "rationalism," are important
+parts of the River on their own terms. In some ways, in fact, they are the most important parts.
+
+
+Section sof book review
+
+1. What is the RIver?
+2. Poker as the Model Game
+3. Intellectual Foundations
+4. When Riverians Took Over
+
+
+Book is divided into two parts Part 1: Gambling which covers poker and casions
+
+Part 2: Risk, covers Sillicon Valley, rationalism and other such stuff
+
+Chapter 1 optimization 
+poker history of WSOP game theory exploitative versus GTO optinioarny
+
+What is the River is about the cognitive cluster and the personality cluster and how liking
+one river activity is correlated with other river activity. Risk and winning a commonality. Upriver
+is intellectual, downriver is poker and gambling.
+
+Chapter 2 Pereption
+Cheating scandal psychology of poker psychology of risk and presure
+pokwer winnings and variance
+personality of poker players do well elsewhere
+
+Chapter 3 Consumption
+
+Counting cards
+Mit guy at Egas
+
+Sloan convergen
+nvegada gambling the chsaino buinsess house always wins penetration of jargon, cross-polination
+people gamble for comfort
+
+Chapter 4 competition
+
+Bottom-up versus top-down, belief in Efficient Market Hypothesis
+
+Transition from gambling to business "If you're so smart why aren't you rich"
+
+"tax on bullshit"
+"U-curve sports betting" "EMH"
+
+524--small edge to be profitable
+attention to detail
+pollinating "How to get your money down"
+outside information can dominate
+Since it's discrete and not proceeding.
+
+Chapter 13 -- Successful Risk takers
+Strategic empathy
+good esimators
+contrarian versus independence
+
+Part 2 risk
+
+Chapter 5 acceleration
+
+Tech Understand EV
+"embracing variance"
+
+Techno-optimist manifesto
+
+Elon Musk--Riverian
+We live in a quant world
+
+Rebellious Streak in SV
+Goes back all teh way to Shockley and the treacherous eight
+
+Key to smart risk-taking: assymetric-bounded
+Fear of ommission, VCs foxes, founders-hedgehogs
+
+Are VCs Riverians
+
+Theory of SV: RT VC with RI founders, adversity in success,
+river and "autism"
+Are VCs contrarian? Are they independently minded?
+Keynesian beauty contest
+
+Chapter 6 - Illusion
+SBF-Riverian
+"I don't find SBF compelling"
+though I don't think there
+Rise of the crypto-billionaries
+SBF as conman
+
+Chapter 7 - Quantification
+Effective Altruism, intellectual side of RIverian
+Open-ended big ideas
+Are these movements upstream of the other parts
+Or is it merely that their scope is wider
+quantify the unquantifiable "values"
+rationalist-EA tension
+Manifest as Rivver Mecca
+Sillicon Valley as the Riverian captical of the world
+Prediction markets--good connective tissue between different parts of the river
+between up-river and down-river
+EA, less Riverian, more instintutional
+Futurism strand
+
+Miscalculation - Chapter 8
+Theories of SBF
+
+Chapter Infinity
+
+AI Risk
+
+Okay, so reread enough to rejog my memory, set ball rolling, but you don't need do wrote back.
