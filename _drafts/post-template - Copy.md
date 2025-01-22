@@ -1,6 +1,6 @@
 ---
 layout: post
 title: "Post Template"
-date: 2024-06-13
+date: 2025-01-01
 mathjax: true
 ---

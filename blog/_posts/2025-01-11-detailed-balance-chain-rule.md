@@ -78,7 +78,7 @@ which is precisely the detailed balance condition!
 In general, it seems important to be able to interpret transition matrices/kernels as conditional probability
 densities---and vice versa. I've seen this intuition be load-bearing in a couple of different places, most notably
 when deriving the [Kolgomorov forward equation](https://en.wikipedia.org/wiki/Kolmogorov_equations#Continuous-time_Markov_chains). This is important in this case because it explains why
-the naive definition of detailed balance---that the transition matrix $P$ is symmetric--is *not* correct.
+the naive definition of detailed balance---that the transition matrix $P$ is symmetric---is *not* correct.
 We care about symmetry between the *joint* probabilities, not the conditional probabilities.
 
 
