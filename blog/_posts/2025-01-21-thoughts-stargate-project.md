@@ -25,6 +25,10 @@ A lot of the money appears to be going to building data centers in Texas (where 
 It's also announced that the Microsoft and OpenAI partnership has been refortified, with re-upped agreements that
  OpenAI must purchase from Azure.
 
+ It's not entirely clear what the government's precise involvement in the project is. The funding seems to be coming 
+ entirely from private sources. It could be that in order for foreign investors to feel secure investing, they needed
+ the government's blessing that the project was OK to move forward?
+
 Apparently, this had been rumored since last March.
  Which, now that you mention it, the name "Stargate" did sound vaguely familiar 
  (in the context of OpenAI; I know that Stargate is a sci-fi reference). 
@@ -33,10 +37,6 @@ Apparently, this had been rumored since last March.
  Trump also revealed that he would be repealing Biden's 2023 executive order on AI risk. 
  I doubt the repeal of the executive order is legally all that impactful, but the message it sends is quite clear: 
  Trump is firmly on the side of tech corporations.
-
-OpenAI's strategy the past two years has been to use their front-runner status to secure their position, 
-whether through lobbying for cumbersome regulation or through securing an exclusive government deal. 
-In the end, it appears that they succeeded through the latter.
 
 Maybe I'm overreacting, but I feel like OpenAI's victory in the race for AGI is all but assured. 
 Even if you think highly of the engineering and management talent at other AI firms, 
