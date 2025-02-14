@@ -4,9 +4,11 @@ title: "The Wasserstein Gradient Explained"
 date: 2025-01-04
 mathjax: true
 ---
-# Wasserstein Gradient Explained
 
-Understanding the Wasserstein gradient requires building up several layers of concepts, starting from basic calculus and moving to measure theory. Let's explore this step by step.
+Wh
+
+Understanding the Wasserstein gradient requires building up several layers of concepts, 
+starting from basic calculus and moving to measure theory. Let's explore this step by step.
 
 ## The First Variation
 We start with a functional F that maps probability measures to real numbers:
