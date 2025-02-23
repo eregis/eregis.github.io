@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is Physics-Inspired Sampling?"
+title: "The Unreasonable Effectiveness of Physics in Sampling"
 date: 2024-01-09
 mathjax: true
 ---
