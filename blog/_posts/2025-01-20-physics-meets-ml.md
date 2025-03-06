@@ -3,6 +3,8 @@ layout: post
 title: "Physics Meets ML"
 date: 2025-01-20
 mathjax: true
+description: "A guided tour through the Physics Meets ML website, highlighting key research at the intersection of physics and machine learning from scaling laws to renormalization theory."
+keywords: physics and machine learning, scaling laws, neural networks, renormalization group, optimal transport, effective theory, Jared Kaplan, Greg Yang, Ethan Dyer, statistical physics, theoretical AI
 ---
 
 One of my favorite resources for learning more about work at the intersection of physics and machine learning 

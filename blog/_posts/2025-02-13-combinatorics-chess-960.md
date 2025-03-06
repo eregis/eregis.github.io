@@ -3,6 +3,8 @@ layout: post
 title: "Chess960 and Combinatorics"
 date: 2025-02-13
 mathjax: true
+description: "An exploration of Chess960 as an alternative to traditional chess, addressing memorization issues in top-level play, with a combinatorial analysis of its 960 unique starting positions."
+keywords: Chess960, Fischer Random Chess, combinatorics, chess variants, Bobby Fischer, chess memorization, opening theory, chess tournaments, mathematical counting, permutations
 ---
 
 *Programming Note:*

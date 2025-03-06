@@ -3,6 +3,8 @@ layout: post
 title: "Phase Transitions As Global Optimization"
 date: 2025-02-16
 mathjax: true
+description: "A conceptual framework for understanding phase transitions as global optimization problems, connecting statistical mechanics with everyday examples through the lens of free energy minimization."
+keywords: phase transitions, statistical mechanics, global optimization, Landau theory, free energy, order parameters, thermodynamics, analytical behavior, specialization, economic analogies
 ---
 
 If I had to boil down phase transitions to their essence, it would be this: 

@@ -3,6 +3,8 @@ layout: post
 title: "Thinking, Fast and Slow Time Scales"
 date: 2025-01-18
 mathjax: true
+description: "An exploration of effective theories in statistical physics applied to reaction networks in biology, explaining how timescale separation creates different levels of modeling."
+keywords: reaction networks, effective theories, timescale separation, statistical physics, biological systems, protein conformations, coarse-graining, cell differentiation, renormalization, systems biology
 ---
 
 I didn't get much from my two semesters of quantum field theory. But one idea that managed to make an impression on me 

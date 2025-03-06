@@ -3,6 +3,8 @@ layout: post
 title: "Detailed Balance Explained"
 date: 2025-01-11
 mathjax: true
+description: "A rigorous explanation of detailed balance in Markov chains, showing how it relates to the chain rule in probability and its implications for system equilibrium and reversibility."
+keywords: detailed balance, Markov chains, equilibrium, time reversibility, transition matrices, steady state, stochastic processes, probability theory, chain rule, statistical mechanics
 ---
 *Alternative Title: Detailed Balance Is Just Chain Rule*
 

@@ -3,6 +3,8 @@ layout: post
 title: "A Physical Analogy for the Jensen-Shannon Divergence"
 date: 2024-12-26
 mathjax: true
+description: "An exploration of the physical interpretation of Jensen-Shannon divergence, comparing it with KL divergence and examining its role in quantifying differences between probability distributions."
+keywords: Jensen-Shannon divergence, KL divergence, probability metrics, statistical physics, non-equilibrium statistical mechanics, information theory, mixture measures, probability theory
 ---
 
 The current professor that I am working with seemingly knows *everything* about sampling

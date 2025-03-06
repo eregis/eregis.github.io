@@ -3,6 +3,8 @@ layout: post
 title: "You Should Read Andrew Gelman"
 date: 2024-11-30
 mathjax: true
+description: "An exploration of Andrew Gelman's contributions to statistics, Bayesian methods, and the replication crisis in science, highlighting the importance of understanding statistical foundations."
+keywords: Andrew Gelman, statistics, Bayesian statistics, replication crisis, social science, frequentist vs Bayesian, garden of forking paths, pre-registration, statistical education
 ---
 
 I came into my PhD with the expectation of specializing in biophysics. But after a year and a half, I've now switched to 

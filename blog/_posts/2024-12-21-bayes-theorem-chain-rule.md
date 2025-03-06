@@ -3,6 +3,8 @@ layout: post
 title: "Bayes Theorem Is Just Chain Rule"
 date: 2024-12-21
 mathjax: true
+description: "A mathematical revelation showing that Bayes' theorem is equivalent to the chain rule in probability, with applications to variational autoencoders and probability spaces."
+keywords: Bayes theorem, chain rule, probability theory, variational autoencoders, machine learning, mathematical equivalence, probability distributions, conditional probability, joint probability
 ---
 
 I'm a bit embarrassed about how long it took me to notice that [Bayes' Theorem]("C:\Users\ericf\critical-points\blog\_posts\2024-11-28-bayes-theorem-explained.md") and the chain rule are actually the same thing. These are perhaps the two most fundamental equations in probability theory. Any derivation is likely to invoke one or both theorems as a step too obvious to even justify. I *personally* have used both of them countless times. And I didn't notice that they were the same thing!

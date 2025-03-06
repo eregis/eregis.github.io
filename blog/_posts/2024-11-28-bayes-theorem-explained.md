@@ -3,6 +3,8 @@ layout: post
 title: "Bayes Theorem Explained"
 date: 2024-11-28
 mathjax: true
+description: "An intuitive explanation of Bayes theorem using everyday examples, demonstrating how we naturally update our beliefs based on new evidence."
+keywords: Bayes theorem, probability, statistics, belief updating, Bayesian statistics, probability theory, subjective probability, conditional probability, decision making
 ---
 
 It's a not-so-busy Saturday. You've finished all your grading for the week, the NSF grant proposal that you've been slaving away at has *finally* been submitted, and you've even been making some solid progress on your research project. So you decide to treat yourself by going to the local art gallery which has a special exhibit on Maya ceramics this month.

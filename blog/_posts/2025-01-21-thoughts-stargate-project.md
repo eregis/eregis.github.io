@@ -2,6 +2,8 @@
 layout: post
 title: "Thoughts on the Stargate Project"
 date: 2025-01-21
+description: "Analysis of the newly announced Stargate Project, a massive collaboration between tech companies and the Trump Administration for AGI development and computing infrastructure."
+keywords: Stargate Project, OpenAI, SoftBank, Oracle, Trump Administration, AI infrastructure, data centers, artificial general intelligence, AGI, tech investment, national security, technology policy
 ---
 
 Various sources:

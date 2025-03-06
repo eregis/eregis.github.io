@@ -1,13 +1,27 @@
 ---
 layout: post
 title: "'On The Edge' by Nate Silver"
-date: 2024-11-13
+date: 2024-02-23
 mathjax: true
 ---
 
-There are two nerds who love to think probabilistically: Nate Silver and me. One is a poker degen who loves the Big Apple, pores over NBA statistics, dabbles in prediction markets, and loves to chop it up with effective altruists. The other, of course, founded FiveThirtyEight.
+Me and Nate Silver have a lot in common. We both love poker, both for its grungy, hoodies-and-sunglasses aestique and also
+as a battleground to test one's risk-taking mettle. We're both huge NBA nerds who love the Big Apple and dabbling in prediction markets. 
+We both love to chop it up with effective altruists and rationalist-types. Nate is my kind of guy.
 
-In theory, I should love this book. Every part of the book is individually interesting to me.
+When I heard that he was writing *On The Edge*---a book attempting to tie all of these seemingly disparate interests together---I was sold. 
+I could never quite articulate it, but I always sensed that despite their superficial differences---poker, sabermetrics,
+effective altruism---they all select for a certain cognitive style, a certain type of brain. 
+It has something to do with the tension between believing in scientific reductionism 
+(the power to quantify and use data to refine our models of reality until we converge to truth) 
+while also acknowledging its limits---recognizing that stochasticity, randomness, and model uncertainty can only be held at bay, 
+never permanently defeated.
+
+
+In theory, I should have loved this book. I am pretty much exactly the target audience. But perhaps I was *too* much
+in the target audience. While most parts of the book were individually interesting to me, they were also deeply familiar. Just
+when I was starting to feel settled in, Nate would whisk off to the next leg of the tour. And somehow---despite Silver's best effort---
+the whole never quite become more than the sum of the parts.
 
 I love poker. While the rules of poker are a bit weird at first, once you get into it, it’s a rich game that is *the* best introduction to game theory and thinking probabilistically that I know of. I learned from the book that Von Neumann heavily relied on poker examples in his seminal book on game theory, and I don’t find that surprising in the slightest.
 

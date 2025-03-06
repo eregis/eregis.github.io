@@ -3,6 +3,8 @@ layout: post
 title: "The Score Is Just The Force"
 date: 2025-01-12
 mathjax: true
+description: "An intuitive interpretation of the score function in machine learning as a force field in physics, explaining score-based generative models through physical analogies."
+keywords: score function, generative models, diffusion models, statistical physics, force fields, Gibbs measure, energy-based models, Langevin dynamics, machine learning, gradient of log probability
 ---
 
 In machine learning, a [generative model](https://en.wikipedia.org/wiki/Generative_model) aims to learn the underlying distribution $p(x)$ of the data. 

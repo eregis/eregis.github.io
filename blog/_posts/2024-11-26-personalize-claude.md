@@ -3,6 +3,8 @@ layout: post
 title: "Personalize Claude"
 date: 2024-11-26
 mathjax: true
+description: "A critical analysis of Anthropic's 'Personalize Claude' feature, examining its effectiveness in emulating personal writing styles and the challenges faced in style replication."
+keywords: Claude, Anthropic, large language models, LLMs, AI writing style, custom AI, personalization, AI limitations, machine learning, ChatGPT alternatives
 ---
 
 I'm a big fan of large language models (LLMs): both for their utility in automating some of the more tedious parts of my work, 

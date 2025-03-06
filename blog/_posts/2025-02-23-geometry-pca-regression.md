@@ -3,6 +3,8 @@ layout: post
 title: "The Geometry of Linear Regression versus PCA"
 date: 2025-02-23
 mathjax: true
+description: "A geometric comparison of linear regression and principal component analysis, explaining their fundamental differences through the lens of error minimization directions."
+keywords: linear regression, principal component analysis, PCA, geometry, data visualization, statistical modeling, error minimization, correlation, father-son height example, supervised vs unsupervised learning
 ---
 
 In statistics, there are two common ways to "find the best linear approximation to data":
