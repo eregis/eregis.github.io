@@ -101,7 +101,7 @@ $$S_\epsilon(\mu, \nu) = \inf_{\gamma \in \Gamma(\mu, \nu)} \int \left[\|x - y\|
 
 Heuristically, imagine we are solving for the optimal coupling iteratively and we have a test coupling $\bar{\gamma}$. If for any $(x,y) \in \text{Supp}(\mu \otimes \nu)$ we have that $\frac{d\gamma}{d(\mu \otimes \nu)} = 0$, then the modified cost function will be $- \infty$ at $(x,y)$ due to the log term. It will then be infinitely favorable to move some probability mass from some other location $(x',y')$ where the cost is finite. Furthermore, again heuristically, we would expect the conditional distribution $p(y\|x)$ to be of a form such that the modified cost is independent of $y$. Otherwise, we could improve on the coupling by moving probability mass from a higher cost region to a lower cost region. (This argument is heuristic because it isn't accounting for the fact that marginal constraints need to be obeyed.) It's instructive to set the modified cost function at $y' = x$ and $y = x$ equal to each other get an approximate functional form for the conditional probability density function:
 
-$$\epsilon \log \left(\frac{d \gamma}{d (\mu \otimes \nu)}(x) \right) = \|x - y\|^2 + \epsilon \log \left(\frac{d \gamma}{d (\mu \otimes \nu)}(y)\right) \longrightarrow \frac{d \gamma}{d (\mu \otimes \nu)}(y) = \left(\frac{d \gamma}{d (\mu \otimes \nu)}(x) \right) e^{-\frac{\|x-y\|^2}{\epsilon}}$$
+$$\epsilon \log \left(\frac{d \gamma}{d (\mu \otimes \nu)}(x,x) \right) = \|x - y\|^2 + \epsilon \log \left(\frac{d \gamma}{d (\mu \otimes \nu)}(x, y)\right) \longrightarrow \frac{d \gamma}{d (\mu \otimes \nu)}(x, y) = \left(\frac{d \gamma}{d (\mu \otimes \nu)}(x, x) \right) e^{-\frac{\|x-y\|^2}{\epsilon}}$$
 
 This is all quite handwavey, but the key points I want to emphasize are that (1) the modified cost function naturally leads to Gaussianity in the conditional distributions, and (2) larger values of epsilon correspond to larger values for the covariance for the conditional.
 
@@ -125,7 +125,7 @@ $$\mathcal{C}(\mu, \nu) = \int \left[\|x-y\|^2 + \frac{d\gamma}{d(\mu \otimes \n
 
 The Radon derivative is always non-negative, so we don't have that vacuum effect that we had in entropic OT that made the coupling have full support. If we once again set the modified cost function at $y' = x$ and $y' = y$ to be equal to each other, then we have that:
 
-$$\frac{d\gamma}{d(\mu \otimes \nu)}(x) = \|x-y\|^2 + \frac{d\gamma}{d(\mu \otimes \nu)}(y) \longrightarrow \frac{d\gamma}{d(\mu \otimes \nu)}(y) = -\|x-y\|^2 + \frac{d\gamma}{d(\mu \otimes \nu)}(x)$$
+$$\frac{d\gamma}{d(\mu \otimes \nu)}(x, x) = \|x-y\|^2 + \frac{d\gamma}{d(\mu \otimes \nu)}(x, y) \longrightarrow \frac{d\gamma}{d(\mu \otimes \nu)}(x, y) = -\|x-y\|^2 + \frac{d\gamma}{d(\mu \otimes \nu)}(x, x)$$
 
 As the Radon derivative can't be negative, what we actually have is a truncated parabola that terminates abruptly when the density reaches zero. Unlike a Gaussian, the parabola has finite width---this is where the sparsity of the conditional distributions comes from.
 
