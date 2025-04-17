@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The Unreasonable Effectiveness of Physics in Sampling"
-date: 2024-01-09
+title: "A Brief History of Physics-Inspired Sampling"
+date: 2025-04-12
 mathjax: true
 ---
 
