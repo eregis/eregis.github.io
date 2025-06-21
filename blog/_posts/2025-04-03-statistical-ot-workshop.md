@@ -142,15 +142,17 @@ There's a fairly obvious analogy that entropic OT is to the KL divergence as qua
 
 There were lots of other interesting topics covered during the conference that I could talk about.
 
-I saw a couple different posters that involved linearized OT. With linearized OT, we approximate the OT distance by taking the $L_2$ norm of the difference between the Radon derivatives of our two measures, with respect to some reference measure. 
+*[Edit: The original version of this blog post gave the wrong definition of linearized OT. Sorry about that!]*
+
+I saw a couple different posters that involved linearized OT. With linearized OT, we approximate the OT distance by taking the $L_2$ norm of the difference between the transport map of our two measures, with respect to some reference measure. 
 
 In differential geometry, there is an object called the exponential map which takes elements of the tangent space and maps them to points in the manifold. (A visual analogy is that you can think of a person throwing a ball, like in a video game. The arrows emanating out of the person dictate a direction and a magnitude. If they then throw the ball, it will land somewhere. The function that relates the cartoon arrow emanating out from the person to the actual physical location in the world where the ball landed is the exponential map.)
 
 Once you have the notion of an exponential map, it's natural to define a *logarithm* map. Given a reference point $\sigma$, you can map points in the manifold to corresponding points in the tangent space of $\sigma$ by inverting the exponential map.
 
-With linearized OT, you use the logarithm map associated with some reference measure $\sigma$ (often $\sigma$ will be something simple like the Gaussian) to map measures to the tangent space of $\sigma$. What exactly, mathematically, is the tangent space of a measure? It's a space of functions which we can identify as Radon derivatives with respect to the reference measure. And given two measures $\mu$ and $\nu$, we can take the $L_2$ norm of the difference of their Radon derivatives with respect to $\sigma$ to define the linearized OT distance.
+With linearized OT, you use the logarithm map associated with some reference measure $\sigma$ (often $\sigma$ will be something simple like the Gaussian) to map measures to the tangent space of $\sigma$. What exactly, mathematically, is the tangent space of a measure? It's a space of functions which we can identify as transport maps. Let $T_\mu$ denote the transport map that pushforwards $\sigma$ into $\mu$. Given two measures $\mu$ and $\nu$, we can take the $L_2$ norm of the difference of their transport maps with respect to $\sigma$ to define the linearized OT distance.
 
-$$\text{LOT}_\sigma(\mu, \nu) = \sqrt{\int \left|\frac{d\mu}{d\sigma} - \frac{d\nu}{d\sigma}\right|^2 d\sigma}$$
+$$\text{LOT}_\sigma(\mu, \nu) = \sqrt{\int \left|T_\mu - T_\nu \right|^2 d\sigma}$$
    
 The choice of reference measure matters because linearized OT is an *approximation* of the true OT distance between the distributions. The closer the reference measure is to the two distributions we are comparing, the better the approximation. (I was told by Sinho that the linearized OT distance is always an *overestimate* of the true OT distance, though I haven't worked it out for myself yet so I don't have a quick intuitive explanation for why that is the case.)
 
