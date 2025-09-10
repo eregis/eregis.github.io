@@ -109,6 +109,25 @@ In the step where we interchange the order of the product over $I$ and the trace
 
 All that's left is to find an expression for $\psi(s_I', s_{I+1}')$. $\psi$ represents the nearest-neighbor interaction of our coarse-grained system as mediated by the intermediary microscopic spin (which has been marginalized). Formally, there are four cases to evaluate (each of the arguments of the function can be either $\pm 1$). In actuality, there are only two unique cases: when the coarse-grained variables are aligned and when the coarse-grained variables are anti-aligned.
 
+For the case when the coarse-grained spins are aligned, we have that the interaction term $\psi$ evalutes to:
+
+$$\begin{align}
+\psi(1, 1) &= \sum_{s_i} \exp[K (s_i (1) + (1)s_i)] \\
+&= \sum_{s_i} \exp[2K s_i] \\
+&= e^{2K} + e^{-2K}
+\end{align}$$
+
+And in the case that the spins are unaligned, the interaction term evaluates to:
+
+$$\begin{align}
+\psi(1, -1) &= \sum_{s_i} \exp[K (s_i (1) + (-1)s_i)] \\
+&= \sum_{s_i} \exp[K (s_i - s_i)] \\
+&= \sum_{s_i} \exp[0] \\
+&= 2
+\end{align}$$
+
+We altogether get that:
+
 $$
 \psi(s_I', s_{I+1}') = \begin{cases}
    e^{2K} + e^{-2K} & \text{when } s_I' = s_{I+1}' \\
@@ -168,8 +187,8 @@ To solve for $K'$, we can substract the two above equations from each other:
 
 $$
 \begin{align}
-K' &= \frac{1}{2} \log \left (\frac{e^{2K} + e^{-2K}}{2} \right) \\
-&= \frac{1}{2} \cosh (2K)
+K' &= \frac{1}{2} \log \left(\frac{e^{2K} + e^{-2K}}{2} \right) \\
+&= \frac{1}{2} \log \left (\cosh [2K] \right) 
 \end{align}
 $$
 
@@ -201,7 +220,7 @@ But we don't just care about the existence of fixed points---we also care about 
 
 For there to be a phase transition, we would need a critical value $K_c$ such that for all values $K < K_c$, the system flows to the $K = 0$ fixed point (disordered phase), and for all values $K > K_c$, the system flows to the $K = \infty$ fixed point (ordered phase). This critical value would mark the boundary between two distinct phases.
 
-However, the 1D Ising model has *no* phase transition. To demonstrate this, we can show that for any finite value of $K$, the RG flow eventually leads to the $K = 0$ fixed point. Only the $K = \infty$ point itself remains at $K = \infty$. This means there's no finite critical temperature separating distinct phases---the system is always disordered at any finite coupling strength.
+However, the 1D Ising model has *no* phase transition. To demonstrate this, we can show that for any finite value of $K$, the RG flow eventually leads to the $K = 0$ fixed point. We can do this by examining two cases: when $K$ is small and when $K$ is large (but finite).
 
 Taking $K \ll 1$, we can show that:
 
