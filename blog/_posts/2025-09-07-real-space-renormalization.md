@@ -243,3 +243,5 @@ K'(K) &= \frac{1}{2} \log \left ( \frac{e^{2K} + e^{-2K}}{2} \right ) \\
 So for large $K$, we have that $K' < K$.
 
 This is an indication that the only stable fixed point is $K^{*} = 0$---the disordered phase. We have no phase transition for the 1D Ising model.
+
+![RG Flow](/assets/real-space-renormalization/rg-flow.png)
