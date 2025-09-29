@@ -5,7 +5,9 @@ date: 2025-01-04
 mathjax: true
 ---
 
-Wh
+*Alternative Title: Wasserstein Gradient Is Not *
+
+The Wasserstein gradient is the 
 
 Understanding the Wasserstein gradient requires building up several layers of concepts, 
 starting from basic calculus and moving to measure theory. Let's explore this step by step.
