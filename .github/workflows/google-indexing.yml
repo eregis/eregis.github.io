@@ -1,0 +1,60 @@
+# .github/workflows/google-indexing.yml
+name: Notify Google of New Posts
+
+on:
+  push:
+    branches:
+      - master # Corrected to use the 'master' branch
+    paths:
+      - '_posts/**' # This triggers the action only when a post is added/changed
+
+jobs:
+  index-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2 # Fetches the last 2 commits to compare changes
+
+      - name: Find new and modified posts
+        id: find_files
+        run: |
+          echo "Finding changed files..."
+          files=$(git diff --name-only HEAD^ HEAD | grep '_posts/' | xargs)
+          if [ -z "$files" ]; then
+            echo "No new or modified blog posts found."
+            echo "files=" >> $GITHUB_OUTPUT
+          else
+            echo "Found files: $files"
+            echo "files=$files" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Convert file paths to URLs (Customized for eregis.github.io)
+        id: to_urls
+        if: steps.find_files.outputs.files
+        run: |
+          # This logic converts a file path like:
+          # _posts/2024-11-10-chess-model-game.md
+          # into the URL:
+          # https://eregis.github.io/blog/2024/11/10/chess-model-game.html
+          
+          SITE_URL="https://eregis.github.io"
+          URLS=""
+          
+          for file in ${{ steps.find_files.outputs.files }}; do
+            slug=$(echo "$file" | sed -E 's|_posts/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md|/blog/\1/\2/\3/\4.html|')
+            url="$SITE_URL$slug"
+            URLS="$URLS $url"
+          done
+
+          echo "Formatted URLs: $URLS"
+          echo "urls_list=$(echo $URLS | xargs)" >> $GITHUB_OUTPUT
+
+      - name: Submit URLs to Google Indexing API
+        if: steps.to_urls.outputs.urls_list
+        uses: any-uz/google-indexing-api-action@v0.2.0
+        with:
+          gcp_sa_key_json: ${{ secrets.GCP_SA_KEY }}
+          urls: ${{ steps.to_urls.outputs.urls_list }}
+          type: 'URL_UPDATED'
