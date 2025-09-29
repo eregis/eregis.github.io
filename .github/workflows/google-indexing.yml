@@ -38,7 +38,8 @@ jobs:
           URLS=""
           
           for file in ${{ steps.find_files.outputs.files }}; do
-            slug=$(echo "$file" | sed -E 's|blog/_posts/([0-9]{4})-([0-g9]{2})-([0-9]{2})-(.*)\.md|/blog/\1/\2/\3/\4.html|')
+            # My previous typo is now corrected in this line
+            slug=$(echo "$file" | sed -E 's|blog/_posts/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md|/blog/\1/\2/\3/\4.html|')
             url="$SITE_URL$slug"
             URLS="$URLS $url"
           done
@@ -48,8 +49,9 @@ jobs:
 
       - name: Submit URLs to Google Indexing API
         if: steps.to_urls.outputs.urls_list
-        uses: any-uz/google-indexing-api-action@v0.2.0
+        # Using a new, alternative action to solve the resolution error
+        uses: go-search-console/google-indexing-api-action@v0.2.0
         with:
-          gcp_sa_key_json: ${{ secrets.GCP_SA_KEY }}
+          # Note: The secret name is the same, but the input variable is different for this action
+          service_account_json: ${{ secrets.GCP_SA_KEY }}
           urls: ${{ steps.to_urls.outputs.urls_list }}
-          type: 'URL_UPDATED'
