@@ -9,6 +9,6 @@ title: About
     <h2>Hi! I'm Eric.</h2>
     <p>I'm a physics PhD student with an interest in statistical physics, probability theory, and machine learning.</p>
     <p>I have a blog called <a href="/blog/">Critical Points</a>.</p>
-    <p>Feel free to email me if you'd like to chat!</p>
+    <p>If you have any information that you think might be relevant to me, you can <a href="https://tally.so/r/68jXyO">send it to me here</a>.</p>
   </div>
 </div>
