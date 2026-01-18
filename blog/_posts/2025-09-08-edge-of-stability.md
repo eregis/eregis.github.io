@@ -3,6 +3,8 @@ layout: post
 title: "What is Edge of Stability?"
 date: 2025-09-08
 mathjax: true
+description: "An introduction to the edge of stability phenomenon in neural network training, exploring how gradient descent navigates loss landscapes and the surprising dynamics that emerge at the boundary of convergence."
+keywords: edge of stability, gradient descent, neural networks, optimization, loss landscape, machine learning, training dynamics, learning rate, Hessian, convergence
 ---
 
 In machine learning, we use data to train our models. We care not only about the final trained model, but also the training dynamics: the trajectory it takes in parameter space while learning from the data. 

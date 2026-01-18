@@ -3,6 +3,8 @@ layout: post
 title: "Statistical Optimal Transport Workshop 2025"
 date: 2025-04-03
 mathjax: true
+description: "A graduate student's reflections on the Statistical Optimal Transport Workshop at Columbia University, covering the Monge problem, Kantorovich formulation, and recent advances in the field."
+keywords: optimal transport, Monge problem, Kantorovich formulation, probability theory, couplings, Wasserstein distance, Columbia University, workshop, statistics
 ---
 
 A couple of months ago, Sinho told me that there would be a Statistical Optimal Transport Workshop

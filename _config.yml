@@ -1,5 +1,6 @@
 # Site settings
 title: Academic Page
+title_separator: ""
 email: eric.regis[at]yale.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Graduate student in Biophysics at Yale University.
@@ -42,5 +43,5 @@ social:
   - platform: github
     user_url: https://github.com/eregis
 
-# Google Analytics (optional, add if you use it)
-# google_analytics: UA-XXXXXXXX-X
+# Google Analytics
+google_analytics: G-M8TE1MHJ0G

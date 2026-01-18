@@ -3,6 +3,8 @@ layout: post
 title: "Thoughts on Scott Alexander on the Dwarkesh Podcast"
 date: 2025-04-05
 mathjax: true
+description: "Reflections on Scott Alexander's appearance on the Dwarkesh Podcast, discussing AI, futurism, and the intersection of technology and society."
+keywords: Scott Alexander, Dwarkesh Podcast, Slate Star Codex, Astral Codex Ten, artificial intelligence, AI futurism, tech discourse, rationalist community
 ---
 
 While I've only recently started researching the mathematics underlying our machine learning models, I've long been

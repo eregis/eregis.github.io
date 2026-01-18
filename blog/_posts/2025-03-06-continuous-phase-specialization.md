@@ -3,6 +3,8 @@ layout: post
 title: "Continuous Phase Transitions and the Dawn of Specialization"
 date: 2025-03-06
 mathjax: true
+description: "An exploration of continuous (second-order) phase transitions through the lens of global optimization, examining how systems undergo gradual symmetry breaking and the emergence of specialization in both physics and economics."
+keywords: phase transitions, Landau theory, continuous phase transitions, second-order transitions, symmetry breaking, free energy, statistical mechanics, optimization, order parameter
 ---
 
 In my previous post "Phase Transitions As Global Optimization", I explored a framework for 

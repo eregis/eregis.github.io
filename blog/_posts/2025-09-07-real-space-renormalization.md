@@ -3,6 +3,8 @@ layout: post
 title: "Real-Space Renormalization Group Explained"
 date: 2025-09-07
 mathjax: true
+description: "An accessible introduction to the real-space renormalization group, explaining how physicists analyze the scale-dependence of physical systems and why this framework is fundamental to understanding universality in statistical mechanics."
+keywords: renormalization group, real-space renormalization, statistical mechanics, scale invariance, universality, Ising model, coarse-graining, theoretical physics, critical phenomena
 ---
 
 The renormalization group is an "apparatus" that is used to analyze how the physics of a system changes as a function of scale. 

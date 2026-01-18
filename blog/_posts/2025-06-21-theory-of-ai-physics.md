@@ -3,6 +3,8 @@ layout: post
 title: "Theory + AI Workshop: Theoretical Physics for AI"
 date: 2025-06-21
 mathjax: true
+description: "A spotlight on the Theory + AI Workshop at the Perimeter Institute, exploring the intersection of theoretical physics and artificial intelligence, with highlights on Bayesian renormalization and related research."
+keywords: Perimeter Institute, theoretical physics, artificial intelligence, machine learning, renormalization group, Bayesian inference, AI research, physics for AI, David Berman
 ---
 
 About a week ago, [I stumbled upon the website](https://pirsa.org/c25022) for a conference called *Theory + AI Workshop: Theoretical Physics for AI*.

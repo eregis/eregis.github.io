@@ -3,6 +3,8 @@ layout: post
 title: "Double Optimization Problems"
 date: 2025-09-15
 mathjax: true
+description: "An exploration of double optimization problems in physical learning, where the laws of physics perform one optimization while an external controller performs another, and how this framework applies to resistor networks and beyond."
+keywords: double optimization, physical learning, resistor networks, optimization, machine learning, analog computing, physical systems, learning theory, Marcelo Guzman
 ---
 
 When I was at the AI + Physics workshop at CUNY, Marcelo Guzman's talk introduced an interesting conceptual framework: double optimization problems.

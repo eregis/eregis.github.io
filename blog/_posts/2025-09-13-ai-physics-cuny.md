@@ -3,6 +3,8 @@ layout: post
 title: "AI + Physics Workshop at CUNY"
 date: 2025-09-13
 mathjax: true
+description: "A graduate student's account of the AI + Physics workshop at the CUNY Graduate Center, covering topics from physical learning and neuromorphic computing to the connections between neural networks and physical systems."
+keywords: AI physics, CUNY, physical learning, neuromorphic computing, neural networks, machine learning, workshop, physics of learning, analog computing
 ---
 
 A couple of weeks ago, Sinho told me about an upcoming [AI + Physics workshop hosted by the CUNY Graduate Center](https://www.gc.cuny.edu/events/ai-physics-workshop). The timing was fortunate. While I've been interested in topics at the intersection of AI and physics for the past year, I had yet to attend a conference on the subject. Attending this workshop would give me exposure to other researchers' work in the area.

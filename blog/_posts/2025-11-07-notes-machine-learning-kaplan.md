@@ -3,6 +3,8 @@ layout: post
 title: "'Notes on Contemporary Machine Learning for Physicists' by Jared Kaplan"
 date: 2025-11-07
 mathjax: true
+description: "A review of Jared Kaplan's lecture notes on machine learning for physicists, discussing how the Anthropic co-founder frames ML as applied statistics and why these notes are an excellent resource for quantitatively-minded learners."
+keywords: Jared Kaplan, machine learning, physicists, Anthropic, scaling laws, neural networks, statistics, lecture notes, deep learning, AI research
 ---
 
 Jared Kaplan is a theoretical physicist who used to specialize in conformal field theory and cosmology, but has recently switched to working in machine learning. He has made several important contributions to the machine learning literature, most notably [his paper on scaling laws](https://arxiv.org/abs/2001.08361): how the performance of neural networks scale as you increase various training inputs (data size, number of parameters, and compute spent). He is a co-founder of Anthropic, one of the leading AI companies (best known for their signature LLM Claude and [recently valued at 183 billion dollars](https://techcrunch.com/2025/09/02/anthropic-raises-13b-series-f-at-183b-valuation/)).
