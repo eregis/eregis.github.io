@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:eregis.github.io)",
+      "Bash(find:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
