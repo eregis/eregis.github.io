@@ -7,7 +7,7 @@ description: "A step-by-step explanation of how to generate samples from a norma
 keywords: probability, statistics, gaussian distribution, normal distribution, rayleigh distribution, sampling methods, statistical physics, boltzmann distribution, polar coordinates
 ---
 
-In [yesterday's post]({% post_url 2024-11-04-inverse-transform-sample-explained %}), I explained inverse transform sampling, 
+In [yesterday's post]({% post_url blog/2024-11-04-inverse-transform-sample-explained %}), I explained inverse transform sampling, 
 a sampling technique which uses the quantile function to sample from a desired distribution. But there was a bit of an issue that I glossed over: it assumed that
 the quantile function itself is efficiently computable! Thankfully, for the case of the exponential distribution, this wasn't an issue 
 as the quantile function only involves taking a logarithm. 

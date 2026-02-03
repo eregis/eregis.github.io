@@ -73,7 +73,7 @@ $$\mathbf{W}(t; \tau, \beta) = \left [\mathbf{E} \left (\frac{t}{\tau}; 1 \right
 
 (The reason for the particularity of the definition is that it's required that $\frac{t}{\tau}$ get raised to the given power, not just $t$ individually. I'm not sure if there is a more elegant way to represent that distinction using the notation that I decided to adopt.)
 
-This family of distributions is called the [Weibull distribution](https://en.wikipedia.org/wiki/Weibull_distribution). And [since we know how to find the PDFs of functions of random variables]({% post_url 2024-08-01-functions-random-variable %}), we can quickly derive the PDF of the Weibull distribution.
+This family of distributions is called the [Weibull distribution](https://en.wikipedia.org/wiki/Weibull_distribution). And [since we know how to find the PDFs of functions of random variables]({% post_url blog/2024-08-01-functions-random-variable %}), we can quickly derive the PDF of the Weibull distribution.
 
 $$
 \mathbf{W}(t; \tau, \beta) = \frac{\beta}{\tau} \left( \frac{t}{\tau}\right)^{\beta - 1} e^{-(t/\tau)^\beta}

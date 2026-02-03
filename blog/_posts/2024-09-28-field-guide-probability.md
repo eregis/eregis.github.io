@@ -101,4 +101,4 @@ There is also a nice appendix on order statistics:
 
 Many of the distributions covered in the main section of the book are actually the distributions of order statistics of more well-known distributions.
 
-Lastly, there is an appendix on the algebra of random variables. A lot of it was review (such as how addition of independent random variables corresponds to the convolution of their probability density functions). But some of it was novel to me (like [the section on functions of random variables]({% post_url 2024-08-01-functions-random-variable %})).
+Lastly, there is an appendix on the algebra of random variables. A lot of it was review (such as how addition of independent random variables corresponds to the convolution of their probability density functions). But some of it was novel to me (like [the section on functions of random variables]({% post_url blog/2024-08-01-functions-random-variable %})).

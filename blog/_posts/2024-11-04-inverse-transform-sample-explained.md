@@ -21,7 +21,7 @@ How do you simulate a uniform random variable on a computer? You use a *pseudora
 
 How do we go from sampling the uniform random variable $X \sim \mathcal{U}(0,1)$ to sampling from the desired random variable $Y \sim g$?
 
-In my [previous post]({% post_url 2024-08-01-functions-random-variable %}) on how to find the PDF of a function of random variable, we showed that if $F$ is the cumulative distribution function (CDF) of $X$, $G$ is the CDF of Y, and $h$ is a function such that $h(X) = Y$, then we have that
+In my [previous post]({% post_url blog/2024-08-01-functions-random-variable %}) on how to find the PDF of a function of random variable, we showed that if $F$ is the cumulative distribution function (CDF) of $X$, $G$ is the CDF of Y, and $h$ is a function such that $h(X) = Y$, then we have that
 
 $$G(y) = F(h^{-1}(y))$$
 
