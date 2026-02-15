@@ -52,6 +52,17 @@ Google Analytics is enabled with Measurement ID `G-M8TE1MHJ0G`. The tracking scr
 
 When posts are pushed to `blog/_posts/` on master, GitHub Actions automatically submits URLs to Google Indexing API.
 
+## Windows Troubleshooting
+
+If `bundle exec jekyll serve` crashes with `Permission denied @ apply2files - _site/./nul`, a file literally named `nul` exists in the repo. On Windows, `nul` is a reserved device name (like `/dev/null` on Unix), so standard file operations can't delete it. To remove it, use the Windows API via Python:
+
+```python
+import ctypes
+ctypes.windll.kernel32.DeleteFileW("\\\\?\\C:\\Users\\ericf\\critical-points\\nul")
+```
+
+The `\\?\` prefix bypasses Windows device name resolution. This file is typically created accidentally by scripts that redirect to `/dev/null` on a Windows shell.
+
 ## Recent Changes (January 2026)
 
 - Removed unused `_layouts/head.html` (contained outdated MathJax v2)
