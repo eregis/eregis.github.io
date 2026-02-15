@@ -29,7 +29,7 @@ There are pros and cons to using a parametrization of your function space that i
 
 $$L(\theta) = \mathbb{E}_{x \sim \mathcal{D}}(g(x) - f(x;\theta))^2$$
 
-With the MSE loss, our problem becomes equivalent to solving a linear regression problem. The set of basis functions $\{1, x, x^2, \ldots, x^N\}$ plays the role of a *feature map*: a fixed set of nonlinear transformations of the input that we then combine linearly. Let $\phi_n$ denote the $n$-th feature in our feature map. Because the loss is convex, and we can solve for the optimal parameters in closed form by taking the gradient of the loss and setting it to zero:
+With the MSE loss, our problem becomes equivalent to solving a linear regression problem. The set of basis functions $\{1, x, x^2, \ldots, x^N\}$ plays the role of a *feature map*: a fixed set of nonlinear transformations of the input that we then combine linearly. Let $\phi_n$ denote the $n$-th feature in our feature map. Because the loss is convex, we can solve for the optimal parameters in closed form by taking the gradient of the loss and setting it to zero:
 
 $$\nabla_\theta L(\theta) = -2\,\mathbb{E}[(g(x) - f(x;\theta))\,\nabla_\theta f(x;\theta)] = 0$$
 
