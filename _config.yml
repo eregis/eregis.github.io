@@ -23,10 +23,6 @@ plugins:
 collections:
   posts:
     output: true
-  cv:
-    output: true
-  notes:
-    output: true
 
 # Markdown settings
 markdown: kramdown
