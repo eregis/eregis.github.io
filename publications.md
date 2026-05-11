@@ -8,6 +8,10 @@ permalink: /publications/
 
 ### Preprints
 
+**A Rod Flow Model for Adam at the Edge of Stability**<br>
+Eric Regis, Sinho Chewi. *arXiv preprint*, 2026.<br>
+[\[arXiv\]](https://arxiv.org/abs/2605.06821)
+
 **Rod Flow: A Continuous-Time Model for Gradient Descent at the Edge of Stability**<br>
 Eric Regis, Sinho Chewi. *arXiv preprint*, 2026.<br>
 [\[arXiv\]](https://arxiv.org/abs/2602.01480)

@@ -6,7 +6,8 @@
       "Bash(curl:*)",
       "Bash(wc:*)",
       "Bash(python:*)",
-      "Bash(xargs ls:*)"
+      "Bash(xargs ls:*)",
+      "Bash(cygpath:*)"
     ]
   }
 }
