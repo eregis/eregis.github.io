@@ -10,7 +10,7 @@ Last month, I stumbled upon an optimistic-sounding paper: ["There Will Be a Scie
 
 >In this paper, we make the case that a scientific theory of deep learning is emerging. By this we mean a theory which characterizes important properties and statistics of the training process, hidden representations, final weights, and performance of neural networks.
 
-Historically, machine learning has been a field where our theoretical understanding has lagged *far* behind its empirical success. This paper argues that might soon start to change. The authors propose that we are gradually seeing the emergence of what they call *learning mechanics*---a mathematical understanding of the process by which machine learning models learn. And the newly-developing theory looks an awful lot like physics!
+Historically, machine learning has been a field where theoretical understanding has lagged *far* behind empirical success. This paper argues that might soon start to change. The authors propose that we are gradually seeing the emergence of what they call *learning mechanics*---a mathematical understanding of the process by which machine learning models learn. And the newly-developing theory looks an awful lot like physics!
 
 > We argue that the emerging theory is best thought of as a *mechanics* of the learning process, and suggest the name *learning mechanics*. We assert that learning mechanics should be a mathematical theory, grounded in first-principles calculations that closely predict empirics, reliant on well-tested approximations and assumptions, aiming for broad impact across the machine learning stack once it reaches maturity.
 
@@ -34,7 +34,7 @@ mutually supportive relationship between learning mechanics and the developing d
 Where mechanistic interpretability aims to be the biology of deep learning, learning mechanics should aspire to be its
 physics, mirroring the complementary relationship between biology and physics in the natural sciences.
 
-Putting my cards on the table: I really like the framing of learning mechanics. My current work falls squarely under the umbrella they describe. The idea that my research is not an isolated effort but part of the broader emergence of something as esteemable as a Learning Mechanics™ seems tailored to flatter my biases.
+Putting my cards on the table: I really like the framing of learning mechanics. My current work falls squarely under the umbrella they describe. The idea that my research is not an isolated effort but part of the broader emergence of something as estimable as a Learning Mechanics™ seems tailored to flatter my biases.
 
 In addition to releasing the paper, the authors [launched a website](https://learningmechanics.pub/) which features essays that build up the learning mechanics framework. There is also [a podcast episode where Jamie Simon and Daniel Kunin, the two lead co-authors of the paper, discuss the ideas it touches on](https://podcasts.apple.com/us/podcast/there-will-be-a-scientific-theory-of-deep-learning/id1544921720?i=1000763465958).
 
@@ -53,9 +53,9 @@ design, replicate, and interrogate, making it more straightforward to discover e
 test theoretical predictions. Few fast-moving scientific domains offer comparable transparency in their governing
 equations or comparable freedom in what can be measured.
 
-In many ways, deep learning is the opposite of physics. In physics, we typically discover the limiting cases before we discover the more general underlying laws. For example, we first deduced $F = ma$ before we discovered special relativity. Only after the discover of special relativity did we realize that Newton's second law is not fundamental, but corresponds to the infinite-speed-of-light limit of the more general dynamics of four-momentum. 
+In many ways, deep learning is the opposite of physics. In physics, we typically discover the limiting cases before we discover the more general underlying laws. For example, we first deduced $F = ma$ before we discovered special relativity---and it was only after the discovery of special relativity that we realized Newton's second law is not fundamental, but corresponds to the infinite-speed-of-light limit of four-momentum dynamics. 
 
-This is seems like a cause for optimism! Imagine how much harder deep learning would be if we only had access to the trajectories of the weights---and if our measurements were noisy or we couldn't measure all the parameters all at once. 
+This seems like a cause for optimism! Imagine how much harder deep learning would be if we only had access to the trajectories of the weights---and if our measurements were noisy or we couldn't measure all the parameters all at once. 
 
 I would contend that, in deep learning, we already know the fundamental laws. While one could argue that gradient descent has to be computationally implemented on a computer, which could be considered another microscopic level underneath, in practice we can ignore this---it doesn't affect the dynamics in any meaningful way. The lowest-level, microscopic description is known to us.
 
@@ -80,11 +80,11 @@ Physics is famous for its creative and ubiquitous use of toy models, which it th
 
 Similarly, physicists are famous for their use of limits. The idea is that if you understand the behavior of a system in various limits, you can "interpolate" between them and understand the broader behavior of the system. For example, suppose you are studying how objects fall under the influence of air resistance, and I give you this formula:
 
-$$\frac{dv}{dt} = -g - \frac{A}{\rho} v$$
+$$\frac{dv}{dt} = -g - \frac{k}{\rho} v$$
 
-where $v$ is the vertical component of the velocity (with up being positive), $g$ is the gravitational acceleration, $\rho$ is the mass density of the object, and $A$ is its cross-sectional area. How would you check the plausibility of this formula? 
+where $v$ is the vertical component of the velocity (with up being positive), $g$ is the gravitational acceleration, $\rho$ is the mass density of the object, and $k$ is a constant that depends on the size and shape of the object and the properties of the surrounding air. How would you check the plausibility of this formula?
 
-One way is to check its behavior in various limits. Let's hold the cross-sectional area fixed. In the limit where the density goes to infinity, the drag term vanishes and the object falls under gravity alone. That makes sense: if you drop a rock off a building, it falls like, well, a rock. In the opposite limit, where the density goes to zero, the drag term dominates and the object barely accelerates. That also makes sense: if you drop a piece of paper off a building, it drifts down slowly rather than plummeting.
+One way is to check its behavior in various limits. Let's hold the size and shape of the object fixed. In the limit where the density goes to infinity, the drag term vanishes and the object falls under gravity alone. That makes sense: if you drop a rock off a building, it falls like, well, a rock. In the opposite limit, where the density goes to zero, the drag term dominates and the object barely accelerates. That also makes sense: if you drop a beach ball off a building, it drifts down slowly rather than plummeting.
 
 Checking the limits of a theory can be especially useful when doing research where there is no answer key: you can save a lot of time by discarding working hypotheses that give the wrong answer in relevant limits. (Though of course there is an art to this. You have to be correct about which limiting behaviors are the relevant ones---which can be tricky.)
 
@@ -100,7 +100,7 @@ The reason this is a deep theory is that all three quantities have an intuitive,
 
 I'm no historian of physics, but my impression is that a lot of subtle progress comes from getting the interpretation right, not just the math. Take special relativity: much of the mathematical machinery was already present in the work of Lorentz and Poincaré. But Einstein gave it the correct physical interpretation---understanding length contraction and time dilation not as dynamical effects of motion through an ether, but as consequences of the nature of space and time themselves. That conceptual reframing was arguably what made the leap to general relativity possible. In that vein, having a theory of hyperparameters that can be cleanly disentangled from the rest of training seems to suggest that we are converging on the right ontology for the optimization dynamics. We can alter the relevant hyperparameters and have a principled, heuristic understanding of what will happen when we do.
 
-Lastly, they invoke the the concept of "universality"---which is important in two slightly distinct ways.
+Lastly, they invoke the concept of "universality"---which is important in two slightly distinct ways.
 
 Universality implies a consistent underlying cause, which is what allows us to even hope for a scientific theory in the first place. In physics, we observe that if you drop an apple in New York City and drop an apple in Paris, they fall at roughly the same rate. That they fall at the same rate probably isn't a coincidence---it's the product of a deeper law governing the behavior of both apples, even though they are separated in space and time. In neural networks, the fact that many different architectures are capable of learning the training data and converging on similar learned functions (implying similar inductive biases) suggests that even though machine learning models appear to be black boxes, their complexity is not *irreducible*.
 
@@ -131,6 +131,6 @@ The idea is that modeling the true underlying function as a projection composed 
 
 Open Direction 7 would also be nice to resolve. Being able to predict scaling laws from theory would be valuable---not because the precise numerical value of the exponents themselves matter so much, but because a scaling exponent is a single concrete number that must integrate everything about the data, architecture, and training algorithm. Predicting it correctly would suggest we've landed on the right conceptual framework for understanding machine learning.
 
-Being able to calculate scaling exponents from first principles would also be interesting because it might shed light on deeper conceptual questions. For example, there is a perspective that even though the loss curve looks smooth and continuous, what's actually happening under the hood is a series of small discrete jumps----each shaped like a sigmoid---where the model abruptly learns some concrete capability. Being able to predict scaling exponents would help test this view and quantify the intuition, potentially connecting it to ideas like saddle-to-saddle dynamics.
+Being able to calculate scaling exponents from first principles would also be interesting because it might shed light on deeper conceptual questions. For example, there is a perspective that even though the loss curve looks smooth and continuous, what's actually happening under the hood is a series of small discrete jumps---each shaped like a sigmoid---where the model abruptly learns some concrete capability. Being able to predict scaling exponents would help test this view and quantify the intuition, potentially connecting it to ideas like saddle-to-saddle dynamics.
 
 Open Direction 9---what makes for a good optimizer?---is something I've been pondering a lot lately. At this point, I feel like I have a pretty good grasp on what optimizers like stochastic gradient descent and Adam actually do from a dynamical perspective, and how that hashes out in terms of affecting quantities like the sharpness. But I don't quite understand how it all connects to core questions like: Why do neural networks generalize? Why do some optimizers generalize better than others? I've always been suspicious of the flatness-equals-better-generalization story. My guess is that once we figure out what's really going on, we'll realize flatness was a proxy for some more fundamental, abstract property of the learned solution. And that optimizers preferring flat solutions will, as a by-product, also prefer that abstract property.
