@@ -24,6 +24,21 @@ bundle install
 - `_layouts/` - Jekyll HTML templates (default.html is the main template)
 - `_includes/` - Reusable HTML partials (e.g., google-analytics.html)
 
+## Drafting Subagents
+
+Six subagents in `.claude/agents/` support the drafting workflow. The author brings a rough draft; the main agent polishes it into a finished post. The subagents are the research layer — they read the corpus, the math, and the sources, and report back. **All are read-only except `figure-smith`; the main agent applies the edits**, so the author sees the diff.
+
+| Agent | Use it when |
+|---|---|
+| `blog-style-analyst` | Before drafting or polishing. Reads published posts and returns the author's voice, notation, and structural conventions, per genre. Given a draft, returns line-anchored rewrites for passages that read off-voice. |
+| `blog-archivist` | Before drafting. Searches the back catalogue for prior coverage — related posts with paste-ready `{% post_url %}` links, derivations already done (link instead of repeating), notation already committed to. |
+| `derivation-checker` | On any draft with math. Independently re-derives each step; flags sign errors, dropped factors, unstated assumptions. Verifies with sympy/numpy. |
+| `fact-checker` | On any draft citing papers, people, or facts. Verifies attributions, dates, and numbers against primary sources; checks blockquotes are verbatim; flags claims that will go stale. |
+| `post-linter` | Before publishing. Front matter, kramdown/MathJax rendering hazards, asset paths, cross-link validity, dead external links. |
+| `figure-smith` | When a post needs a figure. Reads existing `assets/*/*.py` to match the house matplotlib idiom, writes and renders the script, returns the embed snippet. The only agent that writes files. |
+
+The three checkers (`derivation-checker`, `fact-checker`, `post-linter`) have disjoint jobs by design: is the *math* right, is the *world* right, does it *render*. Run them in parallel.
+
 ## Post Front Matter
 
 Posts require this front matter format:
