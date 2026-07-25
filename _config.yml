@@ -19,6 +19,19 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Never build these into the site. Note: setting `exclude` replaces Jekyll's
+# defaults, so the default entries are re-listed here explicitly.
+exclude:
+  - CLAUDE.md
+  - "Music - Shortcut.lnk"
+  - Gemfile
+  - Gemfile.lock
+  - gemfiles
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
 # Collections
 collections:
   posts:
