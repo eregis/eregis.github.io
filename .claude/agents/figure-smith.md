@@ -2,7 +2,7 @@
 name: figure-smith
 description: Writes and renders matplotlib figures for Critical Points posts, matching the house plotting idiom learned from the existing assets scripts. Produces both the .py script and the .png, plus the snippet to embed. Use when a post needs a new figure or an existing figure regenerated.
 tools: Read, Grep, Glob, Write, Edit, Bash
-model: opus
+model: sonnet
 color: green
 ---
 

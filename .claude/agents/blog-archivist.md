@@ -2,7 +2,7 @@
 name: blog-archivist
 description: Searches the Critical Points back catalogue for prior coverage of a topic and returns related posts with paste-ready cross-links, derivations already done, and notation already committed to. Use proactively before drafting a post so the new post links to prior work instead of repeating it.
 tools: Read, Grep, Glob
-model: opus
+model: sonnet
 color: cyan
 ---
 

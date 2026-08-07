@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mean-Field Dynamics Explained"
+title: "The Mean-Field Theory of Two-Layer Neural Networks"
 date: 2026-07-14
 mathjax: true
 permalink: /unlisted/mean-field-dynamics-932e2c63816eef3ea01c/

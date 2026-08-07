@@ -2,7 +2,7 @@
 name: post-linter
 description: Pre-publish sweep of a Critical Points draft — front matter, kramdown/MathJax rendering hazards, broken asset paths, invalid cross-links, dead external links. Use proactively on any post before it is published.
 tools: Read, Grep, Glob, Bash
-model: opus
+model: sonnet
 color: yellow
 ---
 

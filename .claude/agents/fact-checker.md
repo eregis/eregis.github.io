@@ -2,7 +2,7 @@
 name: fact-checker
 description: Verifies the non-mathematical claims in a Critical Points draft — dates, attributions, priority, names, numbers, quotes — against primary sources, and flags claims that will go stale. Use proactively on any draft that cites papers, people, or facts about the world.
 tools: Read, Grep, Glob, WebSearch, WebFetch
-model: opus
+model: sonnet
 color: orange
 ---
 

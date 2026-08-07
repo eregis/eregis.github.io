@@ -7,7 +7,8 @@
       "Bash(wc:*)",
       "Bash(python:*)",
       "Bash(xargs ls:*)",
-      "Bash(cygpath:*)"
+      "Bash(cygpath:*)",
+      "Bash(grep -c '^\\\\\\\\\\\\[' \"C:\\\\Users\\\\ericf\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-ericf-critical-points\\\\02f44138-5fa9-4b14-8b76-393221bb04a6\\\\scratchpad\\\\rendered.html\")"
     ]
   }
 }
