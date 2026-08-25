@@ -8,6 +8,10 @@ permalink: /publications/
 
 ### Preprints
 
+**Variational Structure at the Edge of Stability**<br>
+Eric Regis. *arXiv preprint*, 2026.<br>
+[\[arXiv\]](https://arxiv.org/abs/2608.21660)
+
 **A Rod Flow Model for Adam at the Edge of Stability**<br>
 Eric Regis, Sinho Chewi. *arXiv preprint*, 2026.<br>
 [\[arXiv\]](https://arxiv.org/abs/2605.06821)
