@@ -177,8 +177,6 @@ In the infinite-width limit, the finite-$N$ interacting particle system converge
 </div>
 <script src="/assets/mean-field-dynamics/mf-widgets.js" defer></script>
 
-Both networks are trained by gradient descent in the mean-field parametrization. On the left, the two networks fit the target. On the right, a scatter plot shows each network's neurons in the $(w_i, v_i)$ plane. As you increase $N$, the two empirical measures converge to the same deterministic flow. The menu swaps in other targets.
-
 So the dynamics of the measure are a Wasserstein gradient flow of the loss. But why would that flow converge to a *global* minimum?
 
 One approach is that of Chizat & Bach. In their setting, they worked with units that are positively homogeneous (e.g. the ReLU unit). Given that assumption, they proved convergence if the following holds:
@@ -289,7 +287,7 @@ $$f_{\mathrm{NTK}} = \sqrt{N} \, f_{\mathrm{MF}}.$$
 As $\alpha = \sqrt{N}$, the parameter
 displacement for NTK regression is $O(1/\sqrt{N})$---recovering the result we had in the previous section.
 
-The widget below trains the same two-layer network at different output scales $\alpha$. At $\alpha = 1$ (the mean-field parameterization), watch the particles migrate: the neurons have to move to learn the target function---a manifestation of feature learning. As you crank up $\alpha$, the fit still converges. But the particles now freeze in place. The network fits the data through small, imperceptible adjustments to the features it started with.
+The widget below trains the same two-layer network at different output scales $\alpha$. At $\alpha = 1$ (the mean-field parameterization), the neurons have to migrate in order to learn the target function---a manifestation of feature learning. As you increase $\alpha$, the fit still converges---but the particles now freeze in place. The network has to fit the data using the features it started with.
 
 <div id="lazy-rich-widget">
 <div class="mfw-math">$$f_\alpha(x) = \frac{\alpha}{N}\sum_{i=1}^{N} v_i \tanh(w_i x + b_i), \qquad \theta_i \leftarrow \theta_i - \frac{\eta N}{\alpha^2} \, \nabla_{\theta_i} L_N, \qquad N = 64$$</div>
@@ -354,6 +352,4 @@ While mean-field theory for two-layer neural networks is well understood, extend
 
 Rigorous multi-layer mean-field limits do exist. [Sirignano and Spiliopoulos (2019)](https://arxiv.org/abs/1903.04440), [Araújo, Oliveira, and Yukimura (2019)](https://arxiv.org/abs/1906.00193), and [Nguyen and Pham (2020)](https://arxiv.org/abs/2001.11443) all constructed versions. But the mathematical objects are heavier.
 
-There is a second way for the particle picture to survive depth. When each layer adds only a small correction to a running hidden state, the layer index reads as *time* and the forward pass becomes a discretized differential equation. Taking that depth continuum jointly with the width limit, [Lu, Ma, Lu, Lu, and Ying (2020)](https://arxiv.org/abs/2003.05508) arrived at a mean-field ODE. The depth limit has since turned out to be stronger than expected: [Chizat (2025)](https://arxiv.org/abs/2509.10167) showed that it performs the averaging all by itself, so an infinitely deep ResNet behaves as if it were infinitely wide whatever its actual width.
-
-In practice, though, the scaling perspective has proved quite useful. Yang's [Tensor Programs](https://arxiv.org/abs/1910.12478) framework handles arbitrary architectures by asking about scaling exponents rather than particle densities. Its physics falls out of a practitioner's question: how large a learning rate should each layer get? Demand feature learning everywhere---every layer's pre-activations moving $O(1)$ per step---and each weight's budget is set by its fan-in. Running this bookkeeping through an arbitrary network *is* the maximal update parametrization, and for two-layer networks it returns the mean-field parametrization exactly.
+In practice, the scaling perspective has proved quite useful. Yang's [Tensor Programs](https://arxiv.org/abs/1910.12478) framework handles arbitrary architectures by asking about scaling exponents rather than particle densities. Its physics falls out of a practitioner's question: how large a learning rate should each layer get? Demand feature learning everywhere and one obtains the maximal update parametrization---which for two-layer networks returns the mean-field parametrization exactly.
