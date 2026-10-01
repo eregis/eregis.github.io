@@ -113,7 +113,7 @@ $$\frac{\delta \mathcal{L}}{\delta \mu}(\theta) = \mathbb{E}_{(x,y)} \big[ \left
 
 This makes sense: the first variation at $\theta$ is the marginal cost of adding neuron-mass at the location $\theta$. It is large and positive at locations where the neuron fires in phase with the current residual $f(x;\mu) - y$, so adding mass there would only increase the loss. It is negative at locations where the neuron fires out of phase with the residual.
 
-To decrease the loss, you need to move neuron-mass from locations with higher values of the first variation to locations with lower values. However, because gradient descent only nudges the parameters, the corresponding particle description must also exhibit local dynamics. The neurons aren't allowed to teleport in order to minimize the loss---they must flow. This is enforced by requiring that the particles follow the flow of a vector field. If particles distributed as $\mu_t$ move through parameter space with velocity field $v_t(\theta)$, their density is transported according to the *continuity equation*,
+To decrease the loss, you need to move neuron-mass from locations with higher values of the first variation to locations with lower values. However, because gradient descent only nudges the parameters, the corresponding particle description must also exhibit local dynamics. The neurons aren't allowed to teleport in order to minimize the loss---they must flow. This is enforced by requiring that the particles follow the flow of a vector field. If particles distributed as $\mu_t$ move through parameter space with velocity field $v_t(\theta)$, their density is transported according to the *continuity equation*:
 
 $$\partial_t \mu_t = -\nabla \cdot (\mu_t \, v_t),$$
 
