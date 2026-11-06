@@ -8,6 +8,10 @@ permalink: /publications/
 
 ### Preprints
 
+**Unifying Central Flow, Rod Flow, and the Edge Coupling**<br>
+Eric Regis, Sinho Chewi. *arXiv preprint*, 2026.<br>
+[\[arXiv\]](https://arxiv.org/abs/2611.08358)
+
 **Variational Structure at the Edge of Stability**<br>
 Eric Regis. *arXiv preprint*, 2026.<br>
 [\[arXiv\]](https://arxiv.org/abs/2608.21660)

@@ -21,11 +21,11 @@ Each unit---each *neuron*---does three things:
 
 <img src="/assets/mean-field-dynamics/network.png" alt="A two-layer neural network: d inputs feeding a hidden layer of N neurons feeding a single scalar output. One representative neuron is highlighted in red -- its incoming edges are the projection w_i, the node itself applies the nonlinearity sigma, and its outgoing edge carries the output weight v_i." style="max-width: 80%; display: block; margin: 0 auto;">
 
-A "feature" is a relevant aspect of the input distribution. If the directions $w_i$ were fixed in advance, this would be linear regression on a fixed set of features---the model would be linear in its trainable parameters (the second-layer weights). But in a two-layer network, the first-layer weights are trained too. Two-layer neural networks then differ from linearly-parametrized networks in that they can *learn* the relevant features. A model that learns its own features is necessarily a nonlinear function of its parameters---which makes the loss landscape non-convex.
+A "feature" is a relevant aspect of the input distribution. If the directions $w_i$ were fixed in advance, this would be linear regression on a fixed set of features---the model would be linear in its trainable parameters (the second-layer weights). But in a two-layer network, the first-layer weights are trained too. Two-layer neural networks then differ from linearly-parametrized networks in that they can *learn* the relevant features. A model that learns its own features is necessarily a nonlinear function of its parameters---which makes the loss landscape non-convex. Define the loss function
 
-$$L(\theta) = \mathbb{E}_{x}\left[\left(f(x; \theta) - f^*(x)\right)^2\right],$$
+$$L(\theta) = \tfrac{1}{2} \mathbb{E}_{x}\left[\left(f(x; \theta) - f^*(x)\right)^2\right],$$
 
-where $f^\ast$ is the target function and $L$ is the loss function.
+where $f^*$ is the target function. This is the mean-squared error: the expected squared difference between the network's function and the target function.
 
 To train the model, we must perform some variant of gradient descent on the loss function. But how do we know that gradient descent will work---that the iterates will converge to a global minimum of the loss? It's hard to prove things in the non-convex setting. Gradient descent on a generic non-convex landscape can get trapped at a local minimum. Yet everyday experience with deep learning suggests the opposite: make the network wide enough, and gradient descent drives the training loss to near-zero reliably. At the beginning of the deep learning revolution, this simple fact had no adequate explanation in theory---not even for the two-layer network, the simplest network that learns features at all.
 
@@ -35,13 +35,13 @@ In the spring of 2018, an explanation arrived. Over the course of five weeks, fo
 
 All four groups answered the question: in the infinite-width limit, do the dynamics of gradient descent converge to a distributional description? Three of the groups tackled the slightly harder question: do those dynamics provably reach a global minimum of the loss?
 
-* **[Mei, Montanari, and Nguyen (April 2018)](https://arxiv.org/abs/1804.06561)** wanted to answer whether stochastic gradient descent (SGD) converges to a global optimum of the loss function. In their setting, they showed that the distribution of neurons evolves according to a nonlinear partial differential equation---which they called *distribution dynamics*. Using this description, they were then able to provide a global convergence guarantee for noisy SGD.
+* **[Mei, Montanari, and Nguyen (April 2018)](https://arxiv.org/abs/1804.06561)** wanted to answer whether stochastic gradient descent (SGD) converges to a global optimum of the loss function. In their setting, they showed that the distribution of neurons evolves according to a nonlinear partial differential equation---which they called *distributional dynamics*. Using this description, they were then able to provide a global convergence guarantee for noisy SGD.
 
 * **[Rotskoff and Vanden-Eijnden (May 2018)](https://arxiv.org/abs/1805.00915)** reinterpreted SGD as an interacting particle system in which each neuron corresponds to a particle and the loss function corresponds to the potential. They were able to show that the probability distribution of the neurons evolves according to a nonlinear Liouville equation. Using the law of large numbers, they showed that the empirical distribution at initialization converges to a well-defined distribution, which can then be used to show weak convergence for the entire trajectory of measures. From this, they were able to prove convergence to a global optimum of the loss.
 
 * **[Sirignano and Spiliopoulos (May 2018)](https://arxiv.org/abs/1805.01053)** investigated the training dynamics of SGD in the limit where both the width of the network and the number of iterations go to infinity. They proved that the dynamics converge to a nonlinear partial differential equation. They also showed that in the infinite-width limit, the neurons asymptotically become independent from each other---a property known as *propagation of chaos*.
 
-* **[Chizat and Bach (May 2018)](https://arxiv.org/abs/1805.09545)** identified the evolution of the measure as a Wasserstein gradient flow: a gradient flow in the space of probability measures endowed with the Wasserstein metric. They showed that this flow converges to a global minimizer of the unregularized loss.
+* **[Chizat and Bach (May 2018)](https://arxiv.org/abs/1805.09545)** identified the evolution of the measure as a Wasserstein gradient flow: a gradient flow in the space of probability measures endowed with the Wasserstein metric. They showed that if this flow converges, its limit is a global minimizer of the loss.
 
 Collectively, they founded what is now called *the mean-field theory of two-layer neural networks*.
 
@@ -85,7 +85,7 @@ Consider the population mean-squared error loss:
 
 $$L_N(\theta_1, \ldots, \theta_N) = \frac{1}{2} \, \mathbb{E}_{(x,y)} \big[ (f(x; \theta_1, \ldots, \theta_N) - y)^2 \big]$$
 
-We want to re-express the loss in terms of the measure. We can do because $f$ depends on the parameters only through $\mu_N$.
+We want to re-express the loss in terms of the measure. We can do so because $f$ depends on the parameters only through $\mu_N$.
 
 $$\mathcal{L}[\mu] = \frac{1}{2}  \mathbb{E}_{(x,y)} \left[ \left( \int g(x; \theta) \, d\mu(\theta) - y \right)^{2} \right]$$
 
@@ -179,17 +179,19 @@ In the infinite-width limit, the finite-$N$ interacting particle system converge
 
 So the dynamics of the measure are a Wasserstein gradient flow of the loss. But why would that flow converge to a *global* minimum?
 
-One approach is that of Chizat & Bach. In their setting, they worked with units that are positively homogeneous (e.g. the ReLU unit). Given that assumption, they proved convergence if the following holds:
+One approach is that of Chizat & Bach. In their setting, they worked with units that are positively homogeneous in their parameters (ReLU is the motivating example). Given that assumption, they proved that the flow ends at a global minimum if the following holds:
 
 1. The flow converges to some limit $\mu_\infty$.
 
-2. The neurons are initialized so that no direction in parameter space is left unoccupied---for any direction you pick, however narrow the sliver around it, some neurons are pointing that way.
+2. The initial neurons form a closed shell around the origin, so no direction in parameter space is left unoccupied.
 
 3. The loss functional $\mathcal{L}$ is convex along density interpolations.
 
 Condition (1) ensures that the limit $\mu_\infty$ satisfies local optimality conditions. 
 
-Condition (2) rules out the failure mode in which mass is cheaper somewhere the flow has no neurons and so cannot feel it. At first glance, this condition might look a bit weak as it only constrains the initialization. What's stopping the neurons from flowing away from some directions and leaving them unoccupied later on? This is where positive homogeneity comes into play. Under homogeneity the velocity field is regular enough that the flow map at any finite time $t$ is a homeomorphism, so it carries the support of $\mu_0$ onto the support of $\mu_t$ without tearing holes in it. As a consequence, we have that if every direction is occupied at $t=0$, then we also that every direction is occupied at every finite $t$. The limit $\mu_\infty$ itself may well fail to have full support, but full support at all finite times is enough.
+Condition (2) rules out the failure mode in which mass is cheaper somewhere the flow has no neurons and so cannot feel it. At first glance, this condition might look a bit weak as it only constrains the initialization. What's stopping the neurons from flowing away from some directions and leaving them unoccupied later on? 
+
+The condition on the initialization suffices because the flow is *smooth*. It can bend and stretch the shell but never tear a hole in it, so every direction remains occupied at every finite $t$. The limit $\mu_\infty$, however, can still leave some directions empty. This is where positive homogeneity comes in: it makes growing a neuron equivalent to adding mass in its direction. So if the limit were suboptimal---that is, if adding mass in some direction would lower the loss---the few neurons still pointing that way would keep growing rather than settle down, contradicting convergence.
 
 Condition (3) then upgrades these local optimality conditions to global optimality. We will show that the loss functional for the two-layer neural network is indeed convex along density interpolations.
 
@@ -213,7 +215,7 @@ $$
 \end{align}
 $$
 
-The final term that is quadratic in $t$ is always negative, so we can then deduce:
+The final term that is quadratic in $t$ is never positive, so we can then deduce:
 
 $$\mathcal{L}[\mu_t] \le (1-t)\, \mathcal{L}[\mu_0] + t\, \mathcal{L}[\mu_1],$$
 
@@ -245,7 +247,7 @@ It turns out---not very far. The NTK $1/\sqrt{N}$ prefactor makes each coordinat
 
 # Lazy Training Versus Feature Learning
 
-So we have two constrasting descriptions of neural network training in the infinite-width limit: NTK regression and mean-field dynamics. Which one is more accurate for understanding the deep neural networks we actually train? 
+So we have two contrasting descriptions of neural network training in the infinite-width limit: NTK regression and mean-field dynamics. Which one is more accurate for understanding the deep neural networks we actually train? 
 
 Chizat, Oyallon, and Bach provided an answer. They showed that training where the parameters barely move---which they call *lazy training*---can be induced without taking an infinite-width limit. Take any
 differentiable model whose output vanishes at initialization, and
@@ -261,8 +263,8 @@ $$
 \begin{align*}
 \Delta f_\alpha &=  \, \nabla_\theta f_\alpha
 \cdot \, \Delta \theta \\
-&= \nabla_\theta f_\alpha \cdot \eta_\alpha \nabla_\theta L \\
-&= \eta_\alpha [\nabla_\theta f_\alpha \cdot \nabla_\theta L]
+&= -\nabla_\theta f_\alpha \cdot \eta_\alpha \nabla_\theta L \\
+&= -\eta_\alpha [\nabla_\theta f_\alpha \cdot \nabla_\theta L]
 \end{align*}
 $$
 
@@ -301,7 +303,7 @@ With the NTK parameterization, each neuron couples to the output $\sqrt{N}$ time
 no longer intensive: it diverges as $O(\sqrt{N})$. The only way to keep a system
 with diverging forces from exploding is to shrink the time elapsed---which
 is exactly why we required that the step size scale as $1/N$. A diverging force integrated
-over a vanishing amount of "real" time causes each particle to an $O(1/\sqrt{N})$ amount.
+over a vanishing amount of "real" time causes each particle to move by an $O(1/\sqrt{N})$ amount.
 
 So laziness, in thermodynamic terms, is *stiffness*: an enormous restoring force
 producing a minuscule displacement. Whereas the physical
