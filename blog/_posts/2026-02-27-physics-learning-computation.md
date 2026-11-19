@@ -54,7 +54,7 @@ Helpfully, the website is running a series of survey lectures where principal in
 
 ### Julia Kempe - Synthetic Data: Friend or Foe in the Age of Scaling?
 
-[Link to lecture](https://youtu.be/x3DrcQs3Lk8?si=Pl0Ttc4b6elOwq-b)
+[Link to lecture](https://youtu.be/x3DrcQs3Lk8)
 
 > As AI model size grows, neural **scaling laws** have become a crucial tool to predict the improvements of large models when increasing capacity and the size of original (human or natural) training data. Yet, the widespread use of popular models means that the ecosystem of online data and text will co-evolve to progressively contain increased amounts of synthesized data.
 
@@ -74,7 +74,7 @@ But there are also reasons to be optimistic. Currently, LLMs are being trained o
 
 ### Miranda Cheng - GUD: Generation with Unified Diffusion
 
-[Link to lecture](https://youtu.be/A2IWWceVbpk?si=-5ZXT0QqPnWZv2oY)
+[Link to lecture](https://youtu.be/A2IWWceVbpk)
 
 > We present the GUD model, a unified diffusion model interpolating between standard diffusion and autoregressive models. Inspired by concepts from the renormalization group in physics, which analyzes systems across different scales, we revisit diffusion models by exploring three key design aspects: 1) the choice of representation in which the diffusion process operates, 2) the prior distribution that data is transformed into during diffusion, and 3) the scheduling of noise levels applied separately to different parts of the data, captured by a component-wise noise schedule. Incorporating the flexibility in these choices, we develop a unified framework for diffusion generative models with greatly enhanced design freedom.
 
@@ -96,7 +96,7 @@ Another difference is the fundamental mathematical object. In diffusion, we care
 
 ### Maissam Barkeshli - Sharpness Dynamics in Neural Network Training
 
-[Link to lecture](https://youtu.be/mZ_DpkL95os?si=2O5YTZGpHdGd8hj8)
+[Link to lecture](https://youtu.be/mZ_DpkL95os)
 
 > In this talk I discuss certain robust, universal phenomena that appear when tracking the top eigenvalue of the Hessian of the loss, which we refer to as the sharpness. The sharpness tracks the local geometry of the training loss landscape and plays a key role in determining the maximal allowable learning rate. It is also conjectured to play an important role in generalization capability. I will demonstrate how sharpness exhibits various universal phenomena during early, middle, and late stages of training across architectures and tasks, and how this phenomena can be understood through the lens of a simple toy model. I will also show how sharpness provides an important lens into understanding the underlying mechanisms of learning rate warmup, and how to make it more efficient.
 

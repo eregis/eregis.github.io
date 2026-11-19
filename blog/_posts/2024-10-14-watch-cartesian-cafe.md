@@ -20,7 +20,7 @@ But there are exceptions. And I want to recommend one of my favorite YouTube cha
 The Cartesian Cafe is a YouTube channel dedicated to long-form in-depth interviews with some of the leading
 minds in mathematics, physics, and computer science. It's hosted by Timothy Nguyen who has a math PhD from MIT
 and currently works as a machine learning researcher at Google Deepmind. Tim is a talented interviewer with
-a great selection of guests. Some of them are known quantites among Very Online math & physics nerds (like [John Baez](https://www.youtube.com/watch?v=gjQ9xoW4waQ&feature=youtu.be)
+a great selection of guests. Some of them are known quantites among Very Online math & physics nerds (like [John Baez](https://www.youtube.com/watch?v=gjQ9xoW4waQ)
 and [Scott Aaronson](https://www.youtube.com/watch?v=qs0D9sdbKPU&t=3980s)). But other guests (like [Greg Yang](https://www.youtube.com/watch?v=1aXOXHA7Jcw)) were obscure to me before the Cartesian Cafe introduced
 me to their work.
 

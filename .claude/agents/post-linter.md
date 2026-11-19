@@ -1,6 +1,6 @@
 ---
 name: post-linter
-description: Pre-publish sweep of a Critical Points draft — front matter, kramdown/MathJax rendering hazards, broken asset paths, invalid cross-links, dead external links. Use proactively on any post before it is published.
+description: Pre-publish sweep of a Critical Points draft — front matter, kramdown/MathJax rendering hazards, broken asset paths, invalid cross-links, dead external links, identifying YouTube/Substack share parameters. Use proactively on any post before it is published.
 tools: Read, Grep, Glob, Bash
 model: sonnet
 color: yellow
@@ -66,6 +66,11 @@ Flag raw-path internal links such as `/blog/2026/02/15/convex-feature-learning`.
 Check that external links resolve, using `curl -I -L --max-time 10` (permitted). Report anything that isn't a 2xx/3xx.
 
 This is the slow step and it hits the network — run it last, and skip it if you were explicitly asked for a fast pass. You are only checking that the URL *resolves*; whether the page actually supports the claim attached to it is `fact-checker`'s job.
+
+**Identifying share parameters (offline — always run, even on a fast pass).** YouTube and Substack share links carry parameters that tie the URL to the author's account. Flag any of these and suggest the default, user-independent URL:
+
+- **YouTube:** `si=` (share tracking — the important one), `pp=`, `feature=`, `utm_*`. Keep only the video ID and, if present, a `t=` timestamp. `https://youtu.be/VIDEO_ID?si=abc123` → `https://youtu.be/VIDEO_ID`.
+- **Substack:** `r=` (personal referral code — the important one), `utm_*`, `showWelcomeOnShare`, `triedRedirect`, `publication_id`, `post_id`, `isFreemail`. `https://name.substack.com/p/slug?r=xyz&utm_medium=ios` → `https://name.substack.com/p/slug`.
 
 ## Output
 
