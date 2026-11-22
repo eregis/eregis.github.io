@@ -3,22 +3,26 @@ import numpy as np
 
 fig, ax = plt.subplots(figsize=(12, 6))
 
-# Layer configuration: (num_nodes, x_position, label)
+# --- palette: nodes are colored by role, as in the computational-graph figures ---
+DATA_FILL, DATA_RIM = '#DDDDDD', '#888888'     # data: the input x
+COMP_FILL, COMP_RIM = '#F2C14E', '#A67C00'     # computed: neurons the forward pass evaluates
+LABEL_COLOR = '#333333'
+
+# Layer configuration: (num_nodes, x_position, label, fill, rim)
 layers = [
-    (3, 0.0, r'Input  $h^{(0)} = x$'),
-    (5, 1.8, r'Hidden  $h^{(1)}$'),
-    (4, 3.6, r'Hidden  $h^{(2)}$'),
-    (1, 5.4, r'Output  $f(x;\theta)$'),
+    (3, 0.0, r'Input  $h^{(0)} = x$', DATA_FILL, DATA_RIM),
+    (5, 1.8, r'Hidden  $h^{(1)}$', COMP_FILL, COMP_RIM),
+    (4, 3.6, r'Hidden  $h^{(2)}$', COMP_FILL, COMP_RIM),
+    (1, 5.4, r'Output  $f$', COMP_FILL, COMP_RIM),
 ]
 
 node_radius = 0.13
-node_color = '#4A90D9'
 edge_color = '#BBBBBB'
 spacing = 0.55
 
 # Compute y positions for each layer (centered vertically)
 positions = []
-for n_nodes, x, label in layers:
+for n_nodes, x, *_ in layers:
     ys = np.linspace(-(n_nodes - 1) / 2 * spacing, (n_nodes - 1) / 2 * spacing, n_nodes)
     positions.append([(x, y) for y in ys])
 
@@ -29,45 +33,34 @@ for i in range(len(layers) - 1):
             ax.plot([x1, x2], [y1, y2], color=edge_color, linewidth=0.8, zorder=1)
 
 # Draw nodes
-for layer_pos in positions:
+for layer_pos, (*_, fill, rim) in zip(positions, layers):
     for (x, y) in layer_pos:
-        circle = plt.Circle((x, y), node_radius, color=node_color,
-                             ec='#2C5F8A', linewidth=1.5, zorder=2)
-        ax.add_patch(circle)
+        ax.add_patch(plt.Circle((x, y), node_radius, color=fill,
+                                ec=rim, linewidth=1.5, zorder=2))
 
 # Draw layer labels below each layer
-for idx, (n_nodes, x, label) in enumerate(layers):
+for idx, (n_nodes, x, label, *_) in enumerate(layers):
     y_bottom = min(y for _, y in positions[idx]) - 0.45
     ax.text(x, y_bottom, label, ha='center', va='top', fontsize=11,
-            fontstyle='italic', color='#333333')
+            fontstyle='italic', color=LABEL_COLOR)
 
-# Annotation: W^(1), b^(1) between input and h^(1)
-x_mid_1 = (layers[0][1] + layers[1][1]) / 2
-y_top_1 = max(max(y for _, y in positions[0]), max(y for _, y in positions[1]))
-ax.text(x_mid_1, y_top_1 + 0.35, r'$W^{(1)}, b^{(1)}$',
-        ha='center', va='bottom', fontsize=12, color='#333333')
 
-# Annotation: sigma above h^(1)
-y_top_h1 = max(y for _, y in positions[1])
-ax.text(layers[1][1], y_top_h1 + 0.35, r'$\sigma(\cdot)$',
-        ha='center', va='bottom', fontsize=12, color='#B03A2E')
+def top(idx):
+    return max(y for _, y in positions[idx])
 
-# Annotation: W^(2), b^(2) between h^(1) and h^(2)
-x_mid_2 = (layers[1][1] + layers[2][1]) / 2
-y_top_2 = max(max(y for _, y in positions[1]), max(y for _, y in positions[2]))
-ax.text(x_mid_2, y_top_2 + 0.35, r'$W^{(2)}, b^{(2)}$',
-        ha='center', va='bottom', fontsize=12, color='#333333')
 
-# Annotation: sigma above h^(2)
-y_top_h2 = max(y for _, y in positions[2])
-ax.text(layers[2][1], y_top_h2 + 0.35, r'$\sigma(\cdot)$',
-        ha='center', va='bottom', fontsize=12, color='#B03A2E')
+# Parameters of each layer, written above the connections that feed it
+for idx, s in [(1, r'$w_i^{(1)}, b_i^{(1)}$'),
+               (2, r'$w_i^{(2)}, b_i^{(2)}$'),
+               (3, r'$w^{(3)}, b^{(3)}$')]:
+    x_mid = (layers[idx - 1][1] + layers[idx][1]) / 2
+    ax.text(x_mid, max(top(idx - 1), top(idx)) + 0.35, s,
+            ha='center', va='bottom', fontsize=12, color=LABEL_COLOR)
 
-# Annotation: v (readout) between h^(2) and output
-x_mid_3 = (layers[2][1] + layers[3][1]) / 2
-y_top_3 = max(max(y for _, y in positions[2]), max(y for _, y in positions[3]))
-ax.text(x_mid_3, y_top_3 + 0.35, r'$v$',
-        ha='center', va='bottom', fontsize=12, color='#333333')
+# Activation function above each hidden layer
+for idx in (1, 2):
+    ax.text(layers[idx][1], top(idx) + 0.35, r'$\sigma(\cdot)$',
+            ha='center', va='bottom', fontsize=12, color=LABEL_COLOR)
 
 ax.set_xlim(-0.9, 6.3)
 ax.set_ylim(-2.1, 1.85)
