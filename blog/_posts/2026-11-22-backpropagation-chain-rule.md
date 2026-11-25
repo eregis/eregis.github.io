@@ -9,7 +9,7 @@ keywords: backpropagation, chain rule, reverse-mode automatic differentiation, c
 
 To train a neural network, you have to construct a *loss function*---a function that has a large value when the network performs the desired task poorly and a small value when it performs well. Once you have the loss function, you can improve the network's performance by minimizing the loss.
 
-But how do you minimize the loss function in practice? One approach you can try is guess-and-check: generate random values for the parameters and compute the resulting loss. If the loss is too large, you discard those parameters. You can then keep randomly re-sampling parameters until you happen to find a model with a sufficiently small loss.
+But how do you minimize the loss function in practice? One approach you could try is guess-and-check: generate random values for the parameters and compute the resulting loss. If the loss is too large, you discard those parameters. You can then keep randomly re-sampling parameters until you happen to find a model with a sufficiently small loss.
 
 While this method might work for easy tasks, it fails for sufficiently complex tasks. For example, if you want a model that can write coherent paragraphs of text, only a vanishingly small region of parameter space achieves that level of performance---so random guessing will essentially never find a viable solution.
 
@@ -19,19 +19,15 @@ Of course, in order to implement gradient descent, we need some way of computing
 
 $$\frac{\partial L}{\partial \theta_i} = \lim_{\epsilon \to 0} \frac{L(\theta_1, \ldots, \theta_i + \epsilon, \ldots, \theta_p) - L(\theta_1, \ldots, \theta_i, \ldots, \theta_p)}{\epsilon}.$$
 
-So one way to compute the gradient of the loss function would be to compute this difference quotient for each parameter using a sufficiently small $\epsilon$. But that wouldn't be computationally feasible. To evaluate the loss at a displaced parameter value, we have to run the network on the data from input to output (which is called the *forward pass*). Computing the gradient this way would then require a forward pass of the model for *every* parameter (plus one baseline evaluation at the unperturbed parameters). If the model has $p$ parameters, that is $p + 1$ forward passes in total. For a modern network---where $p$ runs into the billions or even trillions---that's prohibitively expensive.
+So one way to compute the gradient of the loss function would be to compute this difference quotient for each parameter using a sufficiently small $\epsilon$. But that wouldn't be computationally feasible. To evaluate the loss at a displaced parameter value, we have to run the network on the data from input to output---which is called the *forward pass*. Computing the gradient this way would then require a forward pass of the model for *every* parameter (plus one baseline evaluation at the unperturbed parameters). If the model has $p$ parameters, that is $p + 1$ forward passes in total. For a modern network---where $p$ runs into the billions or even trillions---that's prohibitively expensive.
+
+Rather than approximating the gradient with finite differences, modern networks compute it using *backpropagation*. With backpropagation, you first run a forward pass to compute the output and the intermediate values of the network. Then you run a *backward pass*. During the backward pass, you systematically compute derivatives, working backward from the output to the input. This works because the chain rule from calculus lets us break complicated derivatives into simple pieces, allowing the gradient of the loss function with respect to the parameters to be calculated efficiently. Backpropagation is ultimately what makes gradient-based learning possible.
 
 # The Forward Pass and The Backward Pass
 
 To compute the gradient efficiently, we will need to use the structure of the network to our advantage. Thankfully, while we often describe neural networks as black boxes, that description isn't literally true. We have access to the architecture, so we know precisely how the network computes its function.
 
-A neural network can be viewed as a *computational graph*: a composition of simple functions, where each node takes the outputs of earlier nodes as its inputs. Conveniently, we know how to take derivatives of compositions of functions. Given functions $g$ and $u$, the derivative of their composition is given by the chain rule:
-
-$$\frac{d}{dx} g(u(x)) = g'(u(x))\, u'(x)$$
-
-Recall that the derivative gives the best linear approximation of a function at a point. The linear approximation of a composition of functions is then the composition of their linear approximations. For 1-D functions, the composition of two linear functions is a linear function whose slope is the product of their slopes.
-
-How is this relevant to neural networks? For a simple example, take a one-dimensional *diagonal linear network*:
+For a simple example, take a one-dimensional *diagonal linear network*:
 
 $$f(x; w_1, w_2) = w_2 w_1 x.$$
 
@@ -41,15 +37,23 @@ For the loss, we'll use the squared error on a single training example $(x, y)$,
 
 $$L = \frac{1}{2}(f - y)^2.$$
 
-We can represent the computation of the loss as computational graph:
+A neural network can be viewed as a *computational graph*: a composition of simple functions, where each node takes the outputs of earlier nodes as its inputs. For the diagonal linear network, we have the following computational graph:
 
 ![The computational graph of L for f = w2 w1 x.](/assets/backpropagation-chain-rule/diagonal-network-forward.png)
 
-In this graph, each arrow points from an input to the node that takes it as an argument. And below each computed node is the function that produces the value of the node from its inputs. Notice that the computational graph of the diagonal linear network includes not only the chain $x \to h \to f$ but *also* the parameters---each one represented by a node. This might seem odd, since in neural networks we usually treat inputs and parameters as different things. However, within a single forward pass, they play the same role: inputs and parameters are both arguments passed to the network to compute its output.
+In this graph, each arrow points from an input to the node that takes it as an argument. And below each computed node is the function that produces the value of the node from its inputs. 
+
+Notice that the computational graph of the diagonal linear network includes not only the chain $x \to h \to f$ but *also* the parameters---each one represented by a node. This might seem odd, since in neural networks we usually treat inputs and parameters as different things. However, within a single forward pass, they play the same role: inputs and parameters are both arguments passed to the network to compute its output.
 
 How do we use the computational graph to compute the derivatives of the loss with respect to the parameters? 
 
-To build intuition, it helps to start with the derivatives of the loss with respect to a couple of the other nodes. We call these derivatives *sensitivities*. The sensitivity of a node measures how much the loss changes per unit perturbation of that node's value, holding fixed every quantity upstream of the node or parallel to it. Note that for nodes corresponding to parameters, the sensitivity coincides with the partial derivative that keeps the other parameters fixed, since in our computational graph all the parameters are parallel to each other.
+Well, conveniently, we know how to take derivatives of compositions of functions. Given functions $g$ and $u$, the derivative of their composition is given by the chain rule:
+
+$$\frac{d}{dx} g(u(x)) = g'(u(x))\, u'(x)$$
+
+Recall that the derivative gives the best linear approximation of a function at a point. The linear approximation of a composition of functions is then the composition of their linear approximations. For 1-D functions, the composition of two linear functions is a linear function whose slope is the product of their slopes.
+
+In order to compute derivatives of the loss with respect to the parameters, it helps to start with the derivatives of the loss with respect to a couple of the other nodes in the computational graph. We call these derivatives *sensitivities*. The sensitivity of a node measures how much the loss changes per unit perturbation of that node's value, holding fixed every quantity upstream of the node or parallel to it. Note that for nodes corresponding to parameters, the sensitivity coincides with the partial derivative that keeps the other parameters fixed, since in our computational graph all the parameters are parallel to each other.
 
 Trivially, we have that $\frac{\partial L}{\partial L} = 1$, since increasing the loss by one unit increases the loss by one unit. For $\frac{\partial L}{\partial f}$, we have
 
@@ -85,7 +89,7 @@ Notice that the sensitivity of $w_2$ depends on $h$. In general, we will find th
 
 ![The backward pass on the same graph: red arrows run back along each forward edge, labeled by the local derivative they multiply by, and each node is labeled by its sensitivity.](/assets/backpropagation-chain-rule/diagonal-network-backward.png)
 
-Importantly, this process can be carried out iteratively for arbitrarily complicated computational graphs. You start at the output and compute its sensitivity. Then you work backward through the network, using the chain rule to compute each node's sensitivity from the sensitivities of the nodes it feeds into. This process of chaining backward to compute sensitivities is called the *backward pass*.
+Importantly, this process can be carried out iteratively for arbitrarily complicated computational graphs. You start at the output and compute its sensitivity. Then you work backward through the network, using the chain rule to compute each node's sensitivity from the sensitivities of the nodes it feeds into. This process of chaining backward to compute sensitivities is called the backward pass.
 
 # Backprop on the MLP
 
@@ -112,7 +116,9 @@ $$f = w^{(N)} \cdot h^{(N-1)} + b^{(N)}.$$
 
 An important difference between the MLP and the diagonal network is that each activation now feeds into *every* neuron in the next layer, rather than into a single node. So when we chain backward, an activation's sensitivity is a sum over all the neurons it feeds into.
 
-Let's compute some sensitivities. Starting from the output, its sensitivity is still $\partial L / \partial f = f - y$. The sensitivity of the last layer's weights is then the vector of penultimate-layer activations scaled by the sensitivity of $f$. Symmetrically, the sensitivity of the penultimate-layer activations is the last layer's weight vector scaled by the same factor:
+Let's compute some sensitivities. Starting from the output, its sensitivity is still $\partial L / \partial f = f - y$. 
+
+Recall that $f = w^{(N)} \cdot h^{(N-1)}$. We then have that the sensitivity of the last layer's weights is given by the vector of penultimate-layer activations scaled by the sensitivity of $f$. Symmetrically, the sensitivity of the penultimate-layer activations is the last layer's weight vector scaled by that same factor:
 
 $$
 \begin{align}
@@ -123,9 +129,9 @@ $$
 
 This mirrors what we found for the diagonal network, except that the weights and activations are now vectors rather than scalars.
 
-Each penultimate-layer activation is computed from its pre-activation by the activation function, so the sensitivity of the pre-activation $z_i^{(N-1)}$ is the sensitivity of its activation multiplied by the derivative of the activation function, $\sigma'(z_i^{(N-1)})$. Since the bias enters the pre-activation additively, the derivative of the pre-activation with respect to the bias is just 1, so the bias has the same sensitivity as the pre-activation.
+Each penultimate-layer activation is computed from its pre-activation by the activation function, so the sensitivity of the pre-activation $z_i^{(N-1)}$ is the sensitivity of its activation multiplied by the derivative of the activation function, $\sigma'(z_i^{(N-1)})$. And for the bias: because it enters the pre-activation additively, the derivative of the pre-activation with respect to the bias is just 1, so the bias has the same sensitivity as the pre-activation.
 
-We can apply the same steps apply at every layer. For layer $\ell$, the sensitivities of the activations, pre-activations, biases, and weight vectors are
+We can apply the same basic steps at every layer. For layer $\ell$, the sensitivities of the activations, pre-activations, biases, and weight vectors are
 
 $$
 \begin{align}
